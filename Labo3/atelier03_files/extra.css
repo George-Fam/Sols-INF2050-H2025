@@ -1,0 +1,52 @@
+
+[data-md-color-scheme="blinded"] {
+    --md-primary-fg-color: #0079be;
+    --md-code-hl-number-color: #0079be;
+    --md-accent-fg-color: #0079be;
+    --md-primary-fg-color--light: #0079be;
+    --md-primary-fg-color--dark: #0079be;
+}
+
+.md-copyright {
+    display: none;
+}
+
+@media print {
+    .md-typeset :is(.admonition-title):before {
+        top: 0.6rem;
+        left: 0.6rem;
+    }
+}
+
+/*@page {*/
+/*    @bottom-left {*/
+/*        content: string(author) !important;*/
+/*    }*/
+/*    @bottom-right {*/
+/*        content: string(copyright) !important;*/
+/*    }*/
+/*}*/
+
+@media print {
+
+    :root > * {
+        --md-primary-fg-color: #0079be;  !important;
+        --md-primary-fg-color--light: #0079be;  !important;
+        --md-primary-fg-color--dark: #0079be;  !important;
+    }
+
+    #doc-toc * {
+        border-color: #0079be !important;
+    }
+
+    .md-typeset h1 {
+        border-bottom: 2px solid #0079be;
+    }
+    .md-typeset h2 {
+        border-bottom: 1px solid #0079be;
+    }
+    .md-typeset h3 {
+        border-bottom: 0.5px solid #0079be;
+    }
+}
+

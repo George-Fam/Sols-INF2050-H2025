@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="fr" class="js-focus-visible js" data-js-focus-visible=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://inf2050.uqam.ca/fr/atelier01.html">
+      
+      
+        <link rel="prev" href="https://inf2050.uqam.ca/fr/index.html">
+      
+      
+        <link rel="next" href="https://inf2050.uqam.ca/fr/introduction.html">
+      
+      
+      <link rel="icon" href="https://inf2050.uqam.ca/fr/assets/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+<!--Support for native app on iOS devices-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="https://inf2050.uqam.ca/fr/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://inf2050.uqam.ca/fr/assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://inf2050.uqam.ca/fr/assets/images/favicon-16.png">
+<link rel="manifest" href="https://inf2050.uqam.ca/manifest.json" crossorigin="use-credentials">
+<meta name="apple-mobile-web-app-title" content="INF-2050">
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+<meta charset="utf-8">
+
+
+    
+      <link rel="stylesheet" href="atelier01_files/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="atelier01_files/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link rel="stylesheet" href="atelier01_files/css.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="atelier01_files/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="blinded" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atelier-01" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="https://inf2050.uqam.ca/fr/index.html" title="INF2050" class="md-header__button md-logo" aria-label="INF2050" data-md-component="logo">
+      
+  <img src="atelier01_files/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title md-header__title--active" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            INF2050
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Atelier 01
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="none" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">Taper pour démarrer la recherche</div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" style="top: 48px;">
+                <div class="md-sidebar__scrollwrap" style="height: 1363px;">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://inf2050.uqam.ca/fr/index.html" title="INF2050" class="md-nav__button md-logo" aria-label="INF2050" data-md-component="logo">
+      
+  <img src="atelier01_files/logo.png" alt="logo">
+
+    </a>
+    INF2050
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Atelier 01
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="https://inf2050.uqam.ca/fr/atelier01.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 01
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#echauffement" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Échauffement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvc" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      MVC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MVC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-existant" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Code existant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-du-jeu" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Règles du jeu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifications-requises" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Modifications requises
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-defensive" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Programmation défensive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation défensive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commandes-de-deplacement-valides" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Commandes de déplacement valides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection-de-linterface" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Protection de l'interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protection de l'interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#illustration" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Illustration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cerise-sur-le-gateau-tostring-personnalise" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Cerise sur le gâteau : toString personnalisé
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#halma-en-ligne" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Halma en ligne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link md-nav__link--passed md-nav__link--active">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les élements de style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/0tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 00
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/vcs-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contrôle de Version I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/1tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/build-systems-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes de construction I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier04.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/ides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier05.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 05
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/testing-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier06.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 06
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/2tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/vcs-2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contrôle de Version II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier07.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 07
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" style="top: 48px;">
+                <div class="md-sidebar__scrollwrap" style="height: 1363px;">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#echauffement" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Échauffement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvc" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      MVC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MVC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-existant" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Code existant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-du-jeu" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Règles du jeu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifications-requises" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Modifications requises
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-defensive" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Programmation défensive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation défensive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commandes-de-deplacement-valides" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Commandes de déplacement valides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection-de-linterface" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Protection de l'interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protection de l'interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#illustration" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Illustration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cerise-sur-le-gateau-tostring-personnalise" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Cerise sur le gâteau : toString personnalisé
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#halma-en-ligne" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Halma en ligne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link md-nav__link--passed md-nav__link--active">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="atelier-01">Atelier 01</h1>
+<p>Dans cette première séance de laboratoire, vous allez restructurer du code afin qu'il respecte le modèle MVC. Le respect
+de MVC sera un critère de notation pour votre soumission de TP. Cette séance de laboratoire vous fournira les
+compétences de base nécessaires pour organiser votre code et pratiquer la séparation des préoccupations.</p>
+<h2 id="echauffement">Échauffement</h2>
+<p>En classe, vous avez vu comment compiler et exécuter une classe Java depuis la ligne de commande. Pour commencer, suivez
+les étapes suivantes :</p>
+<ol>
+<li>Téléchargez <a href="https://gitlab.info.uqam.ca/inf2050/labs/-/tree/main/01/task?ref_type=heads">le jeu exemple</a>.</li>
+<li>Extrayez le projet sur votre disque.</li>
+<li>Ouvrez un terminal et <code>cd</code> vers l'emplacement du projet. Entrez dans le répertoire <code>mvc-exercise</code>.</li>
+<li>Compilez le projet avec <code>javac *java</code>.</li>
+<li>Exécutez le projet avec <code>java View</code>.</li>
+<li>Inspectez le code de <code>View</code> avec un éditeur de texte et modifiez-le afin que la deuxième sortie ne montre plus le <code>x</code>
+   en haut à gauche.</li>
+</ol>
+<div class="admonition avertissement">
+<p class="admonition-title">Pour l'instant, ne pas utiliser un IDE</p>
+<p>Bien sûr, nous allons utiliser massivement des IDEs plus tard dans le
+ cours. Pour l'instant, il est important de comprendre où placer les 
+fichiers sur le disque et ce qui se passe lors de la compilation du 
+code. Rafraîchissez vos bases maintenant, je pourrais poser des 
+questions liées à cela lors de l'examen.</p>
+</div>
+<h2 id="mvc">MVC</h2>
+<p>Dans le cours précédent, nous avons brièvement discuté du modèle MVC, qui permet de structurer le code en modules,
+chaque module ayant un but spécifique.</p>
+<ul>
+<li>Modèle : Représente l'état du modèle, mais contient le moins de logique possible.</li>
+<li>Contrôleur : Donne le contrôle sur la modification du modèle, assure que les changements dans le modèle sont
+  légitimes.</li>
+<li>Vue : Visualise l'état du modèle et transmet les demandes de modification du modèle au contrôleur.</li>
+</ul>
+<p><img src="atelier01_files/model-view-controller-light-blue.png" width="75%" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<blockquote>
+<p>Crédit de l'image : <a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">Documentation MVC de Mozilla</a></p>
+</blockquote>
+<h4 id="code-existant">Code existant</h4>
+<p>Le code que vous venez de tester est un mini-jeu, mais
+l'<a href="https://gitlab.info.uqam.ca/inf2050/labs/-/tree/main/01/task?ref_type=heads">implémentation est négligée</a>,
+car le jeu a un <code>modèle</code> et une <code>vue</code>, mais la <code>vue</code> a un accès complet en lecture <strong>et</strong> en écriture sur le modèle. En
+d'autres termes, il n'y a pas de
+contrôleur.</p>
+<ul>
+<li>Dans l'état actuel, <em>la vue peut modifier arbitrairement les données stockées dans le modèle</em>, tous les changements
+  sont possibles : des changements raisonnables, ainsi que des changements absurdes.</li>
+<li>Dans cette séance de laboratoire, vous ajouterez un contrôleur, qui "contrôlera" comment le modèle est modifié par la
+  vue. Finalement, en utilisant le contrôleur, la vue ne pourra pas corrompre le modèle. Le contrôleur sert donc de
+  couche de protection.</li>
+</ul>
+<h4 id="regles-du-jeu">Règles du jeu</h4>
+<p>Le code fourni représente un très simple "jeu". Un plateau de jeu 4x4 et une seule figure qui peut se déplacer.</p>
+<ul>
+<li>Le modèle représente une simple matrice booléenne 4x4.<ul>
+<li>Les valeurs booléennes codent les cases vides (<code>false</code>), ou la case où se trouve la figure (<code>true</code>).</li>
+<li>Initialement, la figure se trouve en haut à gauche, donc seul <code>[0][0]</code> est <code>true</code>, toutes les autres positions du
+  tableau sont <code>false</code>.</li>
+</ul>
+</li>
+<li>Il n'y a qu'une seule figure sur le plateau, et la vue tente de la déplacer de la position initiale en haut à
+  gauche <code>(0,0)</code> vers la position en bas à droite <code>(3,3)</code>.</li>
+<li>Le contexte est un jeu où les figures ne doivent être déplacées que d'une case adjacente à l'autre. D'autres
+  déplacements ne sont pas autorisés.</li>
+<li>Actuellement, comme le modèle n'a absolument aucune protection, et que le code exemple fourni dans la vue en profite.<ul>
+<li>La vue <em>pourrait</em> suivre les règles, en déplaçant la figure vers le bas à droite, une case à la fois.</li>
+<li>Cependant, puisqu'il n'y a pas de contrôleur pour imposer le respect des règles, la vue peut aussi simplement
+  ignorer les règles du jeu et placer la figure directement sur la case cible.</li>
+</ul>
+</li>
+</ul>
+<p>Exemple 1 : La vue respecte les règles du jeu et déplace la figure, une case à la fois.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Step 1: move figure to the right</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure field to the right</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Step 2: move figure to the right, again</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure field to the right</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// Step 3: move figure to the right, again</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure field to the right</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// Step 4: move figure down</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure field to the right</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// Step 5: move figure down, again</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure field to the right</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">// Step 6: move figure down, again</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure field to the right</span>
+</code></pre></div>
+<p>Exemple 2 : La vue ignore les règles du jeu et place la figure directement sur la case cible.</p>
+<div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Move the figure directly to target position, instead of moving along a path of allowed sequential moves. </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">// This implementation ignores the game rules.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]=</span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// remove figure from top left field </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">model</span><span class="p">.</span><span class="na">board</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">]=</span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// place figure on bottom right field</span>
+</code></pre></div>
+<h4 id="modifications-requises">Modifications requises</h4>
+<ul>
+<li>Votre tâche est de sécuriser le jeu, afin que la vue soit forcée à jouer selon les règles.<ul>
+<li>Avec les modifications que vous apporterez, l'exemple 2 ci-dessus ne sera plus possible.</li>
+</ul>
+</li>
+<li>En détail, vous devez :<ul>
+<li>Créer une nouvelle classe "Contrôleur"</li>
+<li>Ajouter 4 méthodes au contrôleur : (chacune modifiant l'état du modèle)<ul>
+<li><code>public void moveLeft() {...}</code></li>
+<li><code>public void moveRight() {...}</code></li>
+<li><code>public void moveUp() {...}</code></li>
+<li><code>public void moveDown() {...}</code></li>
+</ul>
+</li>
+<li>Assurez-vous que la vue utilise le contrôleur pour déplacer la figure, c'est-à-dire que la vue ne modifie plus
+  directement la classe <code>Model</code>.</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>Pourquoi ces modifications rendent-elles notre implémentation plus sûre ?</summary>
+<p>Lorsque l'on définit manuellement des champs individuels sur <code>true</code> ou <code>false</code>,
+ il est facile de faire des erreurs, ou d'ignorer délibérément les 
+règles du jeu. Utiliser des méthodes dédiées du contrôleur pour naviguer
+ la figure est plus élégant et garantit le respect des règles du jeu.</p>
+</details>
+<h2 id="packages">Packages</h2>
+<p>Généralement, votre <code>Modèle</code>, <code>Vue</code>, et <code>Contrôleur</code> ne sont pas juste une seule classe, mais plusieurs ensembles de
+classes respectifs. Java offre un
+concept nommé <code>packages</code> pour regrouper les classes dans des structures semblables à des dossiers.</p>
+<ul>
+<li>Revisez votre code de l'exercice précédent, afin que chaque classe réside dans un dossier dédié, c'est-à-dire que
+  votre base de code devrait ressembler à ceci :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── controller
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│&nbsp;&nbsp; └── Controller.java
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├── model
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│&nbsp;&nbsp; └── Model.java
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>└── view
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    └── View.java
+</code></pre></div>
+<details class="question">
+<summary>Qu'est-ce qui a changé ?</summary>
+<p>Les classes résident maintenant dans des dossiers dédiés, nommés <code>view</code>, <code>controller</code> et <code>model</code>.</p>
+</details>
+<p>Notez que les classes Java ne peuvent pas accéder au code d'autres packages (dossiers) sans une déclaration <code>import</code>
+dédiée :</p>
+<p>Exemple, <code>View.class</code> nécessite une ligne supplémentaire au début :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">view</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">controller.Controller</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">model.Model</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">View</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="o">[</span><span class="p">...</span><span class="o">]</span>
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Qu'est-ce qu'un import, au fait ? Pourquoi ne pas simplement mettre tout dans un seul dossier ?</p>
+<p><a href="https://stackoverflow.com/questions/147454/why-is-using-a-wild-card-with-a-java-import-statement-bad">Voici une excellente explication des imports et de leur utilisation...</a></p>
+</div>
+<h2 id="programmation-defensive">Programmation défensive</h2>
+<p>Votre code fonctionne probablement maintenant. Mais est-il robuste ? Va-t-il planter dans des cas particuliers ? Peut-il
+encore être détourné (piraté) pour contourner les protections MVC ?</p>
+<h3 id="commandes-de-deplacement-valides">Commandes de déplacement valides</h3>
+<p>Il est temps de faire quelques tests : Le rôle du contrôleur n'est pas seulement d'assurer que votre modèle reste dans
+un état valide, mais aussi de garantir qu'aucune commande dangereuse ne soit exécutée.</p>
+<ul>
+<li>Que se passe-t-il si <code>moveRight</code> est appelé 4 fois, au lieu de 3 fois d'affilée ? (C'est dangereux, car cela
+  déplacerait littéralement la figure en dehors du plateau.)</li>
+<li>Un bon contrôleur s'assurera que votre programme ne plante pas.<ul>
+<li>Renforcez votre code pour qu'il ne plante pas lorsque le contrôleur est utilisé pour déplacer la figure en dehors
+  des limites du plateau.</li>
+<li>Changez le type de retour des méthodes du contrôleur en <code>boolean</code> et retournez <code>false</code> lorsqu'un déplacement
+  demandé n'est pas autorisé.</li>
+</ul>
+</li>
+</ul>
+<h3 id="protection-de-linterface">Protection de l'interface</h3>
+<ul>
+<li>Dans le prochain cours, nous examinerons de plus près un concept appelé <code>interfaces</code>.</li>
+<li>Pour l'instant, il suffit de savoir que les interfaces peuvent être utilisées pour "cacher" certaines méthodes, afin
+  qu'elles ne puissent pas être exploitées.</li>
+</ul>
+<details class="question">
+<summary>Comment une interface pourrait-elle être utilisée pour sécuriser davantage l'implémentation ?</summary>
+<p>En ce moment, la vue a toujours accès au modèle. Bien que 
+(espérons-le) vous ayez modifié votre implémentation, de sorte que le 
+modèle soit modifié en utilisant le contrôleur, la vue a encore besoin 
+d'un accès en lecture au modèle (simplement pour afficher les choses). 
+Une interface peut être utilisée pour "cacher" toutes les méthodes (ou 
+champs privés) qui modifient l'état du modèle. De cette façon, la vue 
+peut accéder au <code>modèle</code> pour lire (afficher l'état du jeu), mais elle est forcée d'utiliser le contrôleur pour les changements d'état.</p>
+</details>
+<h4 id="illustration">Illustration</h4>
+<p>Nous pouvons définir une interface <code>ModelReadOnly.java</code> :</p>
+<div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">model</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cm">/**</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cm"> * Read only interface for the MVC model. It must not be possible to modify model state, using</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="cm"> * the methods offered by this interface.</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="cm"> *</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="cm"> * @author Maximilian Schiedermeier</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="cm"> */</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">ModelReadOnly</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="cm">/**</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="cm">   * Retruns a 2d representation of the model. Only a single field in the matrix must be true,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="cm">   * and indicated the position of the figure on the board.</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="cm">   *</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="cm">   * @return 2d boolean array with exatly one field true.</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="cm">   */</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">  </span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="nf">getBoard</span><span class="p">();</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">}</span>
+</code></pre></div>
+<p>De manière similaire, nous disons à notre implémentation existante de <code>Model</code> qu'elle adhère à l'interface nouvellement
+définie, mais qu'elle renvoie une copie des données au lieu des données réelles. Pour toute opération d'affichage, cela
+suffira. Mais si quelqu'un tente de détourner notre getter pour manipuler directement l'état du modèle (c'est-à-dire
+contourner le contrôleur), ses efforts seront vains.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">model</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">// This next line has been changed.</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">// The `implements` keyword links the `ModelReadOnly` </span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// interface to our implementation.</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Model</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ModelReadOnly</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="c1">// [...]</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="c1">// Here we make sure to return a *copy* of the model state,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="c1">// instead of exposing the model.</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="nd">@Override</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="nf">getBoard</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">boardRepresentation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">boardRepresentation</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">boardRepresentation</span><span class="o">[</span><span class="n">y</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="n">boardRepresentation</span><span class="o">[</span><span class="n">y</span><span class="o">][</span><span class="n">x</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="n">boardRepresentation</span><span class="o">[</span><span class="n">posY</span><span class="o">][</span><span class="n">posX</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">boardRepresentation</span><span class="p">;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="p">}</span>
+</code></pre></div>
+<p>D'accord, mais qu'est-ce qui est gagné ?</p>
+<ul>
+<li>La <code>vue</code> peut toujours accéder au <code>modèle</code> en lecture :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    ModelReadOnly model = new Model();
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    model.getBoard(); // &lt;- This method is available
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    model.board[0][0]=false; // &lt;-- This line is rejected by the compiler.
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    // ... because the ModelReadOnly interface does not grant 
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    // access to class internals.
+</code></pre></div>
+<h3 id="cerise-sur-le-gateau-tostring-personnalise">Cerise sur le gâteau : toString personnalisé</h3>
+<p>Avec toutes les modifications effectuées jusqu'ici, votre code est 
+relativement robuste. Mais la vue a encore trop de connaissances sur les
+ détails internes du modèle. Idéalement, la vue ne devrait pas connaître
+ plus de détails sur les internes du modèle que ce qui est absolument 
+nécessaire.</p>
+<p>Notre vue est encore primitive, car elle se contente d'imprimer une 
+représentation sous forme de chaîne de caractères de l'objet modèle. 
+Cela peut être géré par le modèle !</p>
+<ul>
+<li>Implémentez une méthode <code>toString()</code> pour votre modèle et modifiez votre interface <code>readOnly</code>, de manière à ce que la vue n'accède jamais aux détails internes de l'objet modèle.<ul>
+<li>Les méthodes <code>toString()</code> <a href="https://www.javatpoint.com/understanding-toString()-method">sont appelées implicitement lorsqu'on imprime un objet</a>. Ainsi, <code>System.out.println(model)</code> appellera la méthode <code>toString()</code> de la classe <code>Model</code>.</li>
+</ul>
+</li>
+<li>Faites en sorte que la vue imprime le modèle en invoquant implicitement <code>toString()</code>.</li>
+</ul>
+<h2 id="halma-en-ligne">Halma en ligne</h2>
+<ul>
+<li>Félicitations, vous avez terminé l'exercice de codage.</li>
+<li>Maintenant, il est temps de jouer à Halma. Vous allez implémenter 
+Halma dans le cadre de votre projet de groupe, donc la meilleure 
+préparation pour votre projet de groupe est de jouer quelques parties de
+ Halma en ligne.<ul>
+<li>Plus vous connaîtrez bien ce que vous allez implémenter, plus ce sera facile ;)</li>
+</ul>
+</li>
+</ul>
+<div class="admonition astuce">
+<p class="admonition-title">Quelques pistes</p>
+<p>En jouant au jeu en ligne : Pouvez-vous penser à des modèles MVC à 
+appliquer à votre futur code Halma ? Y a-t-il des parallèles avec le 
+code que vous venez d'écrire ? Quels changements seraient nécessaires 
+dans le modèle ? Quelles modifications du contrôleur seraient 
+nécessaires ?</p>
+</div>
+<h2 id="solution">Solution</h2>
+<p>La solution pour cette séance de laboratoire est disponible sur GitLab :</p>
+<p><a href="https://gitlab.info.uqam.ca/inf2050/inf2050-samples/-/tree/1cd0aeb6adb78c683f238e1740139bbedf738617/mvc-exercise">Solution</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+        
+          
+          <a href="https://inf2050.uqam.ca/fr/index.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Bienvenue">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Bienvenue
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="https://inf2050.uqam.ca/fr/introduction.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les élements de style">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Les élements de style
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="atelier01_files/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="atelier01_files/extra.js"></script>
+      
+    
+  
+</body></html>
