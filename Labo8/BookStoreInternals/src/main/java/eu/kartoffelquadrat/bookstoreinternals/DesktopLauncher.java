@@ -1,5 +1,6 @@
 package eu.kartoffelquadrat.bookstoreinternals;
 
+
 /**
  * Legacy launcher class to demonstrate access and functionality of the bookstore.
  *
@@ -40,16 +41,7 @@ public class DesktopLauncher {
     System.out.print(comments);
   }
 
-  /**
-   * Test int.
-   *
-   * @param a Le premier chiffre
-   * @param b the b
-   * @return the int
-   */
-  public static int test(int a, int b){
-    return a*b;
+  public static void printData2() {
+    printData();
   }
-
-
 }
