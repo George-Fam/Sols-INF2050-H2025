@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="fr" class="js-focus-visible js" data-js-focus-visible=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://inf2050.uqam.ca/fr/atelier06.html">
+      
+      
+        <link rel="prev" href="https://inf2050.uqam.ca/fr/testing-1.html">
+      
+      
+        <link rel="next" href="https://inf2050.uqam.ca/fr/2tp.html">
+      
+      
+      <link rel="icon" href="https://inf2050.uqam.ca/fr/assets/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+<!--Support for native app on iOS devices-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="https://inf2050.uqam.ca/fr/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://inf2050.uqam.ca/fr/assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://inf2050.uqam.ca/fr/assets/images/favicon-16.png">
+<link rel="manifest" href="https://inf2050.uqam.ca/manifest.json" crossorigin="use-credentials">
+<meta name="apple-mobile-web-app-title" content="INF-2050">
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+<meta charset="utf-8">
+
+
+    
+      <link rel="stylesheet" href="atelier06_files/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="atelier06_files/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link rel="stylesheet" href="atelier06_files/css.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="atelier06_files/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="blinded" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atelier-06" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="https://inf2050.uqam.ca/fr/index.html" title="INF2050" class="md-header__button md-logo" aria-label="INF2050" data-md-component="logo">
+      
+  <img src="atelier06_files/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            INF2050
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Atelier 06
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="none" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">Taper pour démarrer la recherche</div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" style="top: 48px;">
+                <div class="md-sidebar__scrollwrap" style="height: 1434px;">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://inf2050.uqam.ca/fr/index.html" title="INF2050" class="md-nav__button md-logo" aria-label="INF2050" data-md-component="logo">
+      
+  <img src="atelier06_files/logo.png" alt="logo">
+
+    </a>
+    INF2050
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les élements de style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/0tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 00
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/vcs-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contrôle de Version I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/1tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/build-systems-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes de construction I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier04.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/ides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier05.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 05
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/testing-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Atelier 06
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="https://inf2050.uqam.ca/fr/atelier06.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 06
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#nombres-parfaits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nombres parfaits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nombres parfaits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests-unitaires-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests unitaires de base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests unitaires de base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-de-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests de régression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests de régression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delai-dattente-du-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Délai d'attente du test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Délai d'attente du test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attente-dexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attente d'exception
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attente d'exception">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-avec-etat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests avec état
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests avec état">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Après
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Après">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avant
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Avant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#couverture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couverture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Couverture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#couverture-de-la-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couverture de la base de données
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Couverture de la base de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-de-singes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests de Singes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests de Singes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-des-nombres-premiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérification des nombres premiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vérification des nombres premiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/2tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/vcs-2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contrôle de Version II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier07.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 07
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" style="top: 48px;">
+                <div class="md-sidebar__scrollwrap" style="height: 1434px;">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#nombres-parfaits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nombres parfaits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nombres parfaits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests-unitaires-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests unitaires de base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests unitaires de base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-de-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests de régression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests de régression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delai-dattente-du-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Délai d'attente du test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Délai d'attente du test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attente-dexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attente d'exception
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attente d'exception">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-avec-etat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests avec état
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests avec état">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Après
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Après">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avant
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Avant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#couverture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couverture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Couverture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#couverture-de-la-base-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couverture de la base de données
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Couverture de la base de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-de-singes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests de Singes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests de Singes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-des-nombres-premiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérification des nombres premiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vérification des nombres premiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="atelier-06">Atelier 06</h1>
+<p>Dans cette séance de laboratoire, vous allez pratiquer la syntaxe de 
+base de JUnit, ce qui vous permettra d'écrire des tests unitaires 
+simples, y compris des conditions spéciales comme les délais d'attente 
+et les exceptions.<br>
+Pour cet exercice, vous travaillerez avec plusieurs bases de code préparées. Les instructions <code>git clone</code> pour le code nécessaire sont incluses tout au long de ce guide.</p>
+<h2 id="nombres-parfaits">Nombres parfaits</h2>
+<ul>
+<li>Les <a href="https://fr.wikipedia.org/wiki/Nombre_parfait">nombres parfaits</a> sont des nombres positifs pour lesquels la somme de tous les diviseurs (y compris <code>1</code>) s'additionne au nombre lui-même.</li>
+<li>Les nombres parfaits sont rares, ils sont beaucoup plus difficiles à trouver que les nombres premiers.</li>
+<li>Les quatre premiers nombres parfaits sont : <code>6</code>, <code>28</code>, <code>496</code>, <code>8128</code>.</li>
+<li>Voici un <a href="https://gitlab.info.uqam.ca/inf2050/perfectnumbers">lien vers un vérificateur de nombres parfaits primitifs</a>. Ce sera votre tâche d'implémenter quelques tests de base.</li>
+</ul>
+<div class="admonition info anecdote">
+<p class="admonition-title">Info</p>
+<p>On ne sait pas s'il existe des nombres parfaits impairs, ni si un 
+nombre infini de nombres parfaits existe. Si vous trouvez une preuve 
+pour l'un ou l'autre, faites-le moi savoir et je m'assurerai que vous 
+obteniez une bourse incroyable.</p>
+</div>
+<h3 id="tests-unitaires-de-base">Tests unitaires de base</h3>
+<p>Les tests unitaires sont des méthodes qui remplissent les conditions suivantes :</p>
+<ul>
+<li>La signature de la méthode commence par <code>public void</code>.</li>
+<li>La méthode est décorée avec l'annotation <code>@Test</code>.</li>
+<li>La méthode est placée dans une classe du sous-dossier <code>src/test/java</code> (pour les projets maven).</li>
+</ul>
+<p>Pour le premier exercice, vous devrez écrire des tests unitaires pour une implémentation fournie.<br>
+Pour préparer la tâche, configurez l'outil <em>Analyseur de nombres parfaits</em> fourni :</p>
+<ol>
+<li>Clonez le projet : <code>git clone https://gitlab.info.uqam.ca/inf2050/perfectnumbers.git</code></li>
+<li>Ouvrez le projet dans IntelliJ</li>
+<li>Lancez-le avec : <code>mvn clean compile exec:java</code><br>
+   Le projet calculera les 4 premiers nombres parfaits, puis s'arrêtera.</li>
+</ol>
+<h4 id="a-vous-de-jouer">À vous de jouer</h4>
+<p>Il est temps d'écrire quelques tests unitaires de base.</p>
+<ul>
+<li>
+<p>Ouvrez la classe préparée et localisez le test unitaire existant :
+   </p><div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="nd">@Test</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">findFirstFourPerfectNumbers</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">PerfectNumberLimitException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="n">PerfectNumberAnalyzer</span><span class="w"> </span><span class="n">analyzer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PerfectNumberAnalyzer</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">firstFour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analyzer</span><span class="p">.</span><span class="na">findPerfectNumbers</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">expectedResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">496</span><span class="p">,</span><span class="w"> </span><span class="mi">8128</span><span class="p">};</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertArrayEquals</span><span class="p">(</span><span class="s">"Numbers computed by analyzer are incorrect!"</span><span class="p">,</span><span class="w"> </span><span class="n">expectedResult</span><span class="p">,</span><span class="w"> </span><span class="n">firstFour</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w"> </span><span class="p">}</span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Dans IntelliJ : Naviguez vers la représentation du système de fichiers à gauche. Faites un clic droit sur le <strong>package</strong> de test (<code>ca.uqam.info</code>), puis sélectionnez <code>Exécuter les tests dans info</code>.<br>
+  <img src="atelier06_files/test.png" width="100%" style="display: block; margin-left: auto; margin-right: auto;"></p>
+</li>
+<li>Vérifiez que votre premier test passe.</li>
+</ul>
+<p>Ensuite, nous voulons ajouter une contrainte de temps :</p>
+<ul>
+<li>Ajoutez une copie du test qui vérifie <strong>pour les 5 premiers</strong> nombres parfaits !</li>
+<li>Le 5e nombre parfait est : <code>33550336</code></li>
+<li>Le test prendra très longtemps à réussir (environ 15 minutes). C'est
+ parce que le 5e nombre parfait est beaucoup plus grand. Vérifier 33 
+millions de nombres prend du temps.</li>
+<li>Clairement, nous n'avons pas autant de patience, donc nous voulons 
+que le test échoue si le 5e nombre n'a pas été trouvé dans une seconde.</li>
+<li>Modifiez l'annotation <code>@Test</code> pour définir un seuil supérieur de <code>1000</code> millisecondes.</li>
+<li>Exécutez à nouveau les tests et assurez-vous que le résultat du test apparaît dans la seconde.</li>
+<li>Le second test devrait maintenant échouer.</li>
+</ul>
+<h3 id="tests-de-regression">Tests de régression</h3>
+<ul>
+<li>Le test de régression vise à garantir que l'ajout de fonctionnalités ne casse rien qui fonctionnait déjà auparavant.</li>
+<li>Maintenant, nous voulons <em>améliorer</em> la recherche existante de nombres parfaits.</li>
+<li>Mais nous voulons également nous assurer <strong>de ne pas régresser</strong> !</li>
+</ul>
+<h4 id="a-vous-de-jouer_1">À vous de jouer</h4>
+<p>Voici une classe qui recherche des nombres parfaits beaucoup plus rapidement.</p>
+<div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">ca.uqam.info</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm">/**</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm"> * Faster extension for perfect number analyzer. Searches only numbers by constructing candidates</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm"> * in binary representation.</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm"> *</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cm"> * @author Maximilian Schiedermeier</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cm"> */</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FastPerfectNumberAnalyzer</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">PerfectNumberAnalyzer</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="cm">/**</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="cm">   * Provides the next number to test. Default implementation tests all numbers, i.e. each iteration</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="cm">   * is just the number itself. Uses binary formula to find perfect number candidates. All perfect</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="cm">   * numbers are of form 1....10.....0, which one more "1"s than "0"s.</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cm">   * Examples: 110, 11100, 1111000, ...</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="cm">   *</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="cm">   * @param iteration as the amount of 0s to contain</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="cm">   * @return decimal equivalent of the binary constructed candidate.</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="cm">   */</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNextNumberToTest</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">iteration</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">binaryNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1"</span><span class="p">;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">iteration</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="n">binaryNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">binaryNumber</span><span class="p">;</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">      </span><span class="n">binaryNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">binaryNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"0"</span><span class="p">;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">binaryNumber</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="p">}</span>
+</code></pre></div>
+<details class="question">
+<summary>Pourquoi cela serait-il une approche valide ?</summary>
+<p>Les quatre premiers nombres parfaits en binaire sont : <code>110</code>, <code>11100</code>, <code>11111000000</code>, <code>1111111000000</code>
+ ... voyez-vous un motif ? L'algorithme amélioré construit des candidats
+ en binaire et ne vérifie que ces candidats. C'est beaucoup plus rapide 
+que de vérifier tous les nombres !</p>
+</details>
+<ul>
+<li>Ajoutez la classe ci-dessus à votre projet.</li>
+<li>Modifiez <code>App.java</code> pour utiliser <code>FastPerfectNumberAnalyzer</code> au lieu de <code>PerfectNumberAnalyzer</code>, et recherchez les 5 premiers nombres parfaits au lieu des 4 premiers.</li>
+<li>Ajoutez un nouveau test unitaire <code>findFirstFivePerfectNumbersFast</code> à <code>PerfectNumberAnalyzerTest</code> qui vérifie les 5 premiers nombres parfaits, en utilisant l'implémentation <em>rapide</em>.</li>
+</ul>
+<h3 id="delai-dattente-du-test">Délai d'attente du test</h3>
+<ul>
+<li>En classe, vous avez vu comment "<em>décorer</em>" les annotations <code>@Test</code>, pour considérer des contraintes supplémentaires.</li>
+<li>Trouvez la syntaxe pour définir une limite de temps supérieure pour l'exécution d'un test.</li>
+</ul>
+<h4 id="a-vous-de-jouer_2">À vous de jouer</h4>
+<ul>
+<li>Modifiez le test <code>findFirstFivePerfectNumbersFast</code> précédemment implémenté et ajoutez une contrainte de temps.</li>
+<li>Il doit échouer s'il prend plus de 0,1 seconde.</li>
+<li>Lancez vos tests et vérifiez qu'il passe, en utilisant l'implémentation de recherche rapide.</li>
+<li>Modifiez votre test pour utiliser l'implémentation lente de 
+recherche et vérifiez qu'il échoue. Ensuite, revenez à l'implémentation 
+rapide.</li>
+</ul>
+<h3 id="attente-dexception">Attente d'exception</h3>
+<ul>
+<li>Les nombres parfaits sont assez "<em>rares</em>".</li>
+<li>Le sixième nombre est déjà <code>8.589.869.056</code>, ce qui est supérieur à la valeur maximale d'entier Java (<code>2.147.483.647</code>).</li>
+<li>Les deux implémentations ont un contrôle de sécurité qui refuse l'exécution lorsque plus de 5 nombres sont demandés.</li>
+<li>Il serait également préférable de tester si le contrôle de sécurité est correctement implémenté.</li>
+<li>Correctement implémenté signifie : le programme doit lancer une <code>PerfectNumberLimitException</code>, lorsqu'il est demandé de rechercher plus de 5 nombres parfaits.</li>
+<li>Trouvez la syntaxe pour vérifier qu'une exception a été lancée pendant l'exécution d'un test.</li>
+</ul>
+<h4 id="a-vous-de-jouer_3">À vous de jouer</h4>
+<ul>
+<li>Ajoutez un test <code>findFirstFivePerfectNumbersFast</code>, qui tente de rechercher les 6 premiers nombres parfaits.</li>
+<li>Si exécuté, le test échouera avec une exception.</li>
+<li>Modifiez le test pour qu'il ne passe que si une <code>PerfectNumberLimitException</code> est lancée.</li>
+</ul>
+<h2 id="tests-avec-etat">Tests avec état</h2>
+<p>Les tests doivent fonctionner dans n'importe quel ordre.</p>
+<ul>
+<li>Ce n'est pas un gros problème lorsque l'on travaille avec des 
+fonctions mathématiques (par exemple, vérifier les nombres parfaits).</li>
+<li>Chaque test crée une nouvelle instance d'objet, donc travailler avec
+ des objets ayant un état n'est pas non plus un problème. Chaque test 
+vit dans son propre environnement d'objet.</li>
+<li>Mais parfois, vous travaillez avec des objets qui persistent des états externes, c'est-à-dire des <em>bases de données</em>.</li>
+</ul>
+<p>Pour les tâches suivantes, vous travaillerez avec le <a href="https://gitlab.info.uqam.ca/inf2050/DataBaseTesting">projet d'exemple StudentDatabase, disponible sur GitLab</a>.</p>
+<ul>
+<li>Créez une "base de données" sur votre bureau :</li>
+<li>Nom de fichier : <code>studentdb.txt</code></li>
+<li>Contenu : "Max Ryan Quentin Romain"</li>
+<li>Clonez le code du projet d'exemple StudentDatabase, et ouvrez-le dans IntelliJ :</li>
+<li><code>git clone https://gitlab.info.uqam.ca/inf2050/DataBaseTesting.git</code></li>
+</ul>
+<h3 id="apres">Après</h3>
+<ul>
+<li>Un autre problème avec les bases de données est que les tests ne sont plus indépendants.</li>
+<li>Même si JUnit crée une nouvelle instance de classe de test pour chaque méthode annotée avec <code>@Test</code>,
+ les données sont persistées en dehors de la classe. Par conséquent, les
+ tests qui modifient l'état entrent facilement en conflit les uns avec 
+les autres.</li>
+</ul>
+<h4 id="a-vous-de-jouer_4">À vous de jouer</h4>
+<ul>
+<li>Ajoutez deux tests individuels supplémentaires :</li>
+<li><code>testAddStudent()</code>, qui appelle <code>TextDatabase.addStudent("Hafedh")</code>. Suivi d'une lecture de la base de données et vérification que <code>Hafedh</code> a été ajouté et que la liste contient maintenant 5 étudiants.</li>
+<li><code>testRemoveStudent()</code>, qui appelle <code>TextDatabase.removeStudent("Max")</code>. Suivi d'une lecture de la base de données et vérification que <code>Max</code> a été retiré et que la liste contient maintenant 3 étudiants.</li>
+<li>Lorsque vous exécutez tous les tests, certains échoueront, car les tests ne sont plus indépendants.</li>
+<li>Revisitez le contenu du cours et trouvez une annotation supplémentaire pour déclarer une méthode à exécuter après chaque test.</li>
+<li>Écrivez une méthode d'assistance qui nettoie la base de données après chaque test, de sorte qu'il n'y ait plus de dépendances.</li>
+</ul>
+<h3 id="avant">Avant</h3>
+<ul>
+<li>Avant de pouvoir tester les opérations CRUD (Créer Lire Mettre à 
+jour Supprimer), vous avez besoin d'une connexion à la base de données.</li>
+<li>Si vous inspectez votre code, chacun de vos tests a commencé par la même ligne, établissant une connexion, suivie du test réel.</li>
+<li>Mais c'est du code boilerplate pur et dupliqué dans tous les tests !</li>
+<li>Il est beaucoup mieux de s'assurer automatiquement que la connexion à
+ la base de données est établie avant chaque test individuel.</li>
+</ul>
+<h4 id="a-vous-de-jouer_5">À vous de jouer</h4>
+<ul>
+<li>Ouvrez la classe <code>DataBaseTesting</code> et assurez-vous de pouvoir exécuter le test fourni <code>testDatabaseRead</code>.</li>
+<li>Refactorisez le code :</li>
+<li>Ajoutez un nouveau champ privé à la classe : <code>private TestDatabase studentDatabase;</code></li>
+<li>Refactorisez la première ligne du test en une méthode supplémentaire, par exemple nommée <code>connectToDatabase()</code>.</li>
+<li>Revisitez le contenu de la dernière conférence et trouvez quelle 
+annotation ajouter à la méthode nouvellement créée pour s'assurer 
+qu'elle est invoquée avant chaque test.</li>
+<li>Assurez-vous de pouvoir toujours exécuter le test.</li>
+</ul>
+<h2 id="couverture">Couverture</h2>
+<ul>
+<li>Les tests sont un excellent moyen d'identifier des bugs, mais malheureusement, ils vous disent peu sur l'absence de bugs.</li>
+<li>Bien qu'il ne soit pas trivial d'obtenir une certitude sur la 
+qualité des tests, il existe des moyens de vérifier si les tests sont au
+ moins quelque peu complets par rapport à la base de code.</li>
+<li>La métrique standard est la <em>couverture</em>.</li>
+<li>Dans IntelliJ, vous pouvez créer un rapport de couverture en faisant un clic droit sur le package de tests, suivi de <code>More Run/Debug -&gt; Run tests with coverage...</code></li>
+</ul>
+<h3 id="couverture-de-la-base-de-donnees">Couverture de la base de données</h3>
+<p>Dans cet exercice, vous mesurerez la couverture de test de votre projet existant de base de données étudiante.</p>
+<h4 id="a-vous-de-jouer_6">À vous de jouer</h4>
+<ul>
+<li>Créez un rapport de couverture pour votre code de production de base de données.</li>
+<li>Il affichera une couverture de <strong>ligne</strong> de <code>95%</code>.</li>
+<li>Trouvez les lignes qui n'étaient pas couvertes.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Inspectez les marqueurs de ligne</p>
+<p>Une fois qu'un rapport de couverture a été généré, chaque ligne 
+exécutable a un marqueur coloré. Recherchez les lignes avec un marqueur 
+rouge.</p>
+</div>
+<h2 id="tests-de-singes">Tests de Singes</h2>
+<p>Les tests de singe sont utiles pour augmenter les tests avec des 
+entrées aléatoires. Cependant, affirmer des nombres aléatoires peut être
+ un peu délicat. Dans cet ultime exercice, vous allez pratiquer la mise 
+en œuvre de tests de type singe sur l'exemple d'un simple vérificateur 
+de nombres premiers.</p>
+<h3 id="verification-des-nombres-premiers">Vérification des nombres premiers</h3>
+<ul>
+<li>Supposons qu'il y ait besoin d'une classe <code>PrimeChecker</code>, avec une méthode unique <code>public boolean isPrime(int numberToTest)</code>.</li>
+<li>La méthode est censée retourner <code>true</code> pour les nombres premiers et <code>false</code> pour les nombres non premiers.</li>
+<li>Vous avez suivi une approche de développement piloté par les tests et d'abord implémenté le test unitaire correspondant :</li>
+</ul>
+<div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">ca.uqam.info</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Assert</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Test</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PrimeCheckerTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nd">@Test</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">verifySomeKnownResults</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertFalse</span><span class="p">(</span><span class="s">"4 is not a prime, but checker said it were."</span><span class="p">,</span><span class="w"> </span><span class="n">PrimeChecker</span><span class="p">.</span><span class="na">isPrime</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertTrue</span><span class="p">(</span><span class="s">"5 is a prime, but checker said it were not."</span><span class="p">,</span><span class="w"> </span><span class="n">PrimeChecker</span><span class="p">.</span><span class="na">isPrime</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertFalse</span><span class="p">(</span><span class="s">"10 is not a prime, but checker said it were."</span><span class="p">,</span><span class="w"> </span><span class="n">PrimeChecker</span><span class="p">.</span><span class="na">isPrime</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertTrue</span><span class="p">(</span><span class="s">"13 is a prime, but checker said it were not."</span><span class="p">,</span><span class="w"> </span><span class="n">PrimeChecker</span><span class="p">.</span><span class="na">isPrime</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
+</code></pre></div>
+<p>Cependant, le test peut être facilement contourné. Par exemple, le 
+programme factice ci-dessous peut être utilisé pour prétendre que la 
+tâche a été résolue :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numberToTest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numberToTest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numberToTest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numberToTest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="a-vous-de-jouer_7">À vous de jouer</h4>
+<ul>
+<li>Implémentez un test de type singe qui génère 1000 nombres pseudo-aléatoires et teste l'implémentation.</li>
+<li>Comme vous ne voulez pas réimplémenter le vérificateur de nombres 
+premiers dans votre test, faites des assertions conditionnelles :</li>
+<li>Si le nombre est pair ou divisible par 3, attendez-vous à <code>false</code>.</li>
+<li>Sinon, ne faites aucune assertion.</li>
+</ul>
+<p>Pour commencer, voici un extrait de code pour générer des nombres positifs aléatoires :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Random</span><span class="w"> </span><span class="n">randomNumberGenerator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">randomNumber1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">randomNumberGenerator</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">randomNumber2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">randomNumberGenerator</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">randomNumber3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">randomNumberGenerator</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">...</span>
+</code></pre></div>
+<p>Assurez-vous que :</p>
+<ul>
+<li>Votre test de singe échoue l'implémentation factice ci-dessus de <code>isPrime</code>.</li>
+<li>Votre test de singe ne fait pas échouer une implémentation sérieuse de <code>isPrime</code>, par exemple, celle-ci :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numberToTest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numberToTest</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">"Cowardly refusing to check number below 2."</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">numberToTest</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numberToTest</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+        
+          
+          <a href="https://inf2050.uqam.ca/fr/testing-1.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Testing I">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Testing I
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="https://inf2050.uqam.ca/fr/2tp.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: TP 02">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                TP 02
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="atelier06_files/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="atelier06_files/extra.js"></script>
+      
+    
+  
+</body></html>

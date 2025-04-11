@@ -1,0 +1,73 @@
+# The Docker image that will be used to build your app
+image: maven:3.9.8-amazoncorretto-21
+
+stages:
+  - precheck
+  - validate
+  - compile
+  - test
+  - package
+  - verify
+  - install
+  - deploy
+
+variables:
+  SKIP_TESTS: "-DskipTests"
+  SKIP_JACOCO: "-Djacoco.skip=true"
+  SKIP_CHECKSTYLE: "-Dcheckstyle.skip=true"
+  SKIP_JAVADOC: "-Dmaven.javadoc.skip=true"
+
+clutter:
+  stage: precheck
+  script:
+    - CLUTTER=$(find . -name \*.class)
+    - if [[ ! -z $CLUTTER ]]; then exit 1; else exit 0; fi
+
+validate:
+  stage: validate
+  script:
+    - mvn validate
+
+compile:
+  stage: compile
+  script:
+    - mvn compile $SKIP_CHECKSTYLE
+
+test:
+  stage: test
+  script:
+    - mvn test $SKIP_CHECKSTYLE
+
+package:
+  stage: package
+  script:
+    - mvn package -B $SKIP_TESTS $SKIP_CHECKSTYLE
+
+verify:
+  stage: verify
+  script:
+    - mvn verify $SKIP_CHECKSTYLE $SKIP_JAVADOC
+    - "cat target/site/jacoco/index.html | grep -o 'Total[^%]*%' | sed 's/<.*>/ /; s/Total/Jacoco Coverage Total:/'"
+  coverage: '/Total.*?([0-9]{1,3})%/'
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+
+install:
+  stage: install
+  script: 
+    - mvn install $SKIP_TESTS $SKIP_CHECKSTYLE $SKIP_JACOCO $SKIP_JAVADOC
+
+deploy:
+  stage: deploy
+  script:
+    - mvn package $SKIP_TESTS $SKIP_CHECKSTYLE $SKIP_JACOCO
+    - "mv target/apidocs public"
+  artifacts:
+    paths:
+      - public
+  pages: true
+  only: 
+    - main

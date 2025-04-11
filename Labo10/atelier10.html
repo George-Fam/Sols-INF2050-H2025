@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="fr" class="js-focus-visible js" data-js-focus-visible=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://inf2050.uqam.ca/fr/atelier10.html">
+      
+      
+        <link rel="prev" href="https://inf2050.uqam.ca/fr/ci.html">
+      
+      
+      
+      <link rel="icon" href="https://inf2050.uqam.ca/fr/assets/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+<!--Support for native app on iOS devices-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="https://inf2050.uqam.ca/fr/assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://inf2050.uqam.ca/fr/assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://inf2050.uqam.ca/fr/assets/images/favicon-16.png">
+<link rel="manifest" href="https://inf2050.uqam.ca/manifest.json" crossorigin="use-credentials">
+<meta name="apple-mobile-web-app-title" content="INF-2050">
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+<meta charset="utf-8">
+
+
+    
+      <link rel="stylesheet" href="atelier10_files/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="atelier10_files/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link rel="stylesheet" href="atelier10_files/css.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="atelier10_files/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="blinded" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atelier-10" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="https://inf2050.uqam.ca/fr/index.html" title="INF2050" class="md-header__button md-logo" aria-label="INF2050" data-md-component="logo">
+      
+  <img src="atelier10_files/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title md-header__title--active" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            INF2050
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Atelier 10
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="none" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">Taper pour démarrer la recherche</div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" style="top: 58px;">
+                <div class="md-sidebar__scrollwrap" style="height: 1213px;">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://inf2050.uqam.ca/fr/index.html" title="INF2050" class="md-nav__button md-logo" aria-label="INF2050" data-md-component="logo">
+      
+  <img src="atelier10_files/logo.png" alt="logo">
+
+    </a>
+    INF2050
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les élements de style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/0tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 00
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/vcs-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contrôle de Version I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/1tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/build-systems-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes de construction I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier04.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/ides.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier05.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 05
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/testing-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier06.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 06
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/2tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/vcs-2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contrôle de Version II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier07.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 07
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/linting.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier08.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 08
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/build-systems-2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes de construction II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/atelier09.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 09
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/3tp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://inf2050.uqam.ca/fr/ci.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Atelier 10
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="https://inf2050.uqam.ca/fr/atelier10.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Atelier 10
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminaires-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préliminaires CI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Préliminaires CI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteger-la-branche-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protéger la branche main
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protéger la branche main">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demandes-de-fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demandes de fusion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demandes de fusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelines CI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines CI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificateur-de-fichiers-inutiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérificateur de fichiers inutiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vérificateur de fichiers inutiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maven-atomique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maven atomique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phases-maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phases Maven
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phases Maven">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisation-des-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisation des stages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimisation des stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction-des-artefacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraction des artefacts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extraction des artefacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer-rapports-junit" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer : Rapports JUnit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer-rapports-jacoco" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer : Rapports Jacoco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer-apidoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer : ApiDoc
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readme-en-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      README en Markdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="README en Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichier-readmemd-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichier README.md du projet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichier README.md du projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" style="top: 58px;">
+                <div class="md-sidebar__scrollwrap" style="height: 1213px;">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminaires-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Préliminaires CI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Préliminaires CI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteger-la-branche-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protéger la branche main
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protéger la branche main">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demandes-de-fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demandes de fusion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demandes de fusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelines-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelines CI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelines CI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verificateur-de-fichiers-inutiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vérificateur de fichiers inutiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vérificateur de fichiers inutiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maven-atomique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maven atomique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phases-maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phases Maven
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phases Maven">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisation-des-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisation des stages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimisation des stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extraction-des-artefacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraction des artefacts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extraction des artefacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer-rapports-junit" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer : Rapports JUnit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer-rapports-jacoco" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer : Rapports Jacoco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer-apidoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer : ApiDoc
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readme-en-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      README en Markdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="README en Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichier-readmemd-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fichier README.md du projet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichier README.md du projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-jouer_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      À vous de jouer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="atelier-10">Atelier 10</h1>
+<p>Dans cette séance de laboratoire, vous allez pratiquer la 
+configuration d'un pipeline d'intégration continue GitLab. Vous 
+travaillerez avec un projet modèle Maven prêt à l'emploi.</p>
+<h2 id="preparation">Préparation</h2>
+<ol>
+<li>
+<p>Créez un nouveau projet Maven <code>CiTestProject</code>, en utilisant le générateur d'archétypes :<br>
+   </p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span>mvn<span class="w"> </span>archetype:generate<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-DgroupId<span class="o">=</span>ca.uqam.info<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-DartifactId<span class="o">=</span>CiTestProject<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>-DarchetypeArtifactId<span class="o">=</span>maven-archetype-quickstart<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>-DinteractiveMode<span class="o">=</span><span class="nb">false</span>
+</code></pre></div><p></p>
+<blockquote>
+<p>Si vous êtes sous Windows, supprimez le <code>\</code> et écrivez la commande sur une seule ligne. Protégez chaque argument en l'encapsulant dans des <code>""</code>, par exemple <code>"-DgroupId=ca.uqam.info"</code>.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"></span>mvn<span class="w"></span> archetype:generate `<span class="w"></span><span class="se"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"></span>"-DgroupId<span class="o">=</span>ca.uqam.info" `<span class="w"></span><span class="se"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"></span>"-DartifactId<span class="o">=</span>CiTestProject" `<span class="w"></span><span class="se"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w"></span>"-DarchetypeArtifactId <span class="o">=</span>maven-archetype-quickstart" `<span class="w"></span><span class="se"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w"></span>"-DinteractiveMode<span class="o">=</span><span class="nb">false"</span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Connectez-vous à GitLab et créez un nouveau projet <code>CiTestProject</code>, en utilisant le signe <code>+</code> en haut à gauche</p>
+<ul>
+<li>Ne pas initialiser un fichier README</li>
+<li>Laissez-le public</li>
+</ul>
+</li>
+<li>Liez les projets :<br>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>git@gitlab.info.uqam.ca:yourgitlabname/citestproject.git
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>add<span class="w"> </span>pom.xml
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>add<span class="w"> </span>src
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"initial commit"</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></li>
+</ol>
+<h2 id="preliminaires-ci">Préliminaires CI</h2>
+<p>L'objectif principal de l'intégration continue est de s'assurer que 
+votre logiciel ne régresse jamais. Plutôt que de permettre des 
+modifications arbitraires sur la branche <code>main</code>, les changements doivent être demandés, et la décision d'accepter ou de rejeter les modifications doit être informée.</p>
+<h3 id="proteger-la-branche-main">Protéger la branche main</h3>
+<p>Protéger la branche <code>main</code> est une condition préalable à une CI significative. Plutôt que de modifier <code>main</code> localement et de pousser de nouveaux commits vers le serveur :</p>
+<ul>
+<li>Les développeurs ne peuvent pousser que sur de nouvelles branches.</li>
+<li>Les développeurs demandent une fusion de leur branche vers <code>main</code>.</li>
+<li>Un responsable de projet approuve la demande de fusion, et un nouveau commit sur <code>main</code> est créé côté serveur.</li>
+</ul>
+<h4 id="a-vous-de-jouer">À vous de jouer</h4>
+<p>Dans un premier temps, nous allons nous assurer que la branche <code>main</code> de votre dépôt rejette les commits directs :</p>
+<ul>
+<li>Accédez à votre projet sur GitLab</li>
+<li>Allez dans <code>Paramètres -&gt; Dépôt -&gt; Branches protégées</code></li>
+<li>Pour la branche <code>main</code>...<ul>
+<li>laissez <code>Autorisé à fusionner</code> tel quel</li>
+<li>définissez <code>Autorisé à pousser et fusionner</code> sur <code>Personne</code></li>
+</ul>
+</li>
+</ul>
+<p>Une fois que vous avez configuré la protection de la branche <code>main</code>, il est temps de vérifier son efficacité :</p>
+<ol>
+<li>Créez un nouveau commit sur <code>main</code>, par exemple en créant un nouveau fichier texte vide ou en ajoutant un commentaire javadoc.</li>
+<li>Essayez de pousser le nouveau commit vers le serveur.</li>
+<li>Vérifiez que le commit est rejeté.</li>
+<li>Supprimez à nouveau votre commit local (sans perdre les modifications que vous avez effectuées) : <code>git reset --soft HEAD~1</code><br>
+   Explication : <code>reset</code> supprime le dernier commit, l'option <code>soft</code> préserve le contenu des fichiers, et <code>HEAD~1</code> permet de naviguer vers "<code>1 commit</code> avant le <code>HEAD</code> actuel".</li>
+</ol>
+<h3 id="demandes-de-fusion">Demandes de fusion</h3>
+<p>Ensuite, vous allez pratiquer la soumission de votre travail de la manière correcte. Plutôt que d'ajouter votre commit à <code>main</code>, puis de pousser...</p>
+<ol>
+<li>Créez et basculez sur une nouvelle branche <code>feature</code>.</li>
+<li>Faites un commit sur votre branche <code>feature</code>.</li>
+<li>Poussez la branche <code>feature</code> vers <code>origin</code> (le serveur GitLab).</li>
+<li>Émettez une demande de fusion en utilisant l'interface Web de GitLab.</li>
+<li>Acceptez la demande de fusion.</li>
+</ol>
+<h4 id="a-vous-de-jouer_1">À vous de jouer</h4>
+<p>Suivez la procédure décrite :</p>
+<ol>
+<li>Utilisez <code>git checkout -b feature</code> pour créer une nouvelle branche.</li>
+<li>Utilisez <code>git add somefile</code> et <code>git commit -m "ajout d'une fonctionnalité"</code> pour créer un nouveau commit sur la branche <code>feature</code>.</li>
+<li>Utilisez <code>git push origin main feature</code> pour envoyer votre branche vers le serveur GitLab.</li>
+<li>Connectez-vous à GitLab, naviguez vers votre projet, sélectionnez 
+votre branche dans le menu déroulant. Ensuite, sélectionnez "nouvelle 
+demande de fusion" (bouton bleu).</li>
+<li>Dans la barre latérale gauche, sélectionnez la demande de fusion et acceptez-la. Sélectionnez <code>supprimer la branche feature après fusion</code>.</li>
+<li>Utilisez <code>git pull</code> pour récupérer la version fusionnée localement.</li>
+</ol>
+<h2 id="pipelines-ci">Pipelines CI</h2>
+<p>Jusqu'à présent, la demande de fusion n'a donné aucune information sur la qualité de votre commit sur la branche <code>feature</code>.</p>
+<ul>
+<li>L'objectif est maintenant de configurer des vérifications et des équilibres pour enquêter sur l'état des commits actuels.</li>
+<li>De cette façon, toute personne tentant une fusion, c'est-à-dire 
+évaluant une demande de fusion, saura si le code peut être accepté en 
+toute sécurité sur <code>main</code>.</li>
+</ul>
+<p>Toute la configuration de l'intégration continue avec GitLab se fait à l'aide d'un fichier <code>.gitlab-ci.yml</code>. Le fichier doit simplement exister pour que GitLab exécute un pipeline CI.</p>
+<ul>
+<li>Créez un fichier <code>.gitlab-ci.yml</code> dans votre projet. Il doit se trouver à la racine, c'est-à-dire juste à côté du fichier <code>pom.xml</code> ou <code>.gitignore</code>.</li>
+<li>En haut du fichier, configurez l'image du conteneur à utiliser pour 
+l'exécution du pipeline CI. En première ligne du fichier, entrez :<br>
+<code>image: maven:3.9.8-amazoncorretto-21</code></li>
+</ul>
+<h3 id="verificateur-de-fichiers-inutiles">Vérificateur de fichiers inutiles</h3>
+<p>Le premier job CI à implémenter sera un vérificateur de fichiers inutiles, qui échoue le pipeline chaque fois que des fichiers <code>.class</code> sont stockés dans votre dépôt.</p>
+<ul>
+<li>Chaque runner doit être associé à une étape CI. L'option la plus 
+simple consiste à sélectionner l'une des étapes par défaut, par exemple <code>build</code>.</li>
+<li>Les runners vivent dans un environnement Linux, donc vous pouvez 
+appeler n'importe quel script Linux pour tester la qualité de votre 
+commit.</li>
+<li>Si aucune restriction supplémentaire n'est configurée, l'ensemble du
+ pipeline CI est appelé pour chaque commit sur n'importe quelle branche 
+envoyée au serveur.</li>
+</ul>
+<h4 id="a-vous-de-jouer_2">À vous de jouer</h4>
+<ul>
+<li>Ajoutez un runner qui retourne un code de sortie non nul (par exemple <code>1</code>), si des fichiers <code>.class</code> sont trouvés dans le commit, exemple :<br>
+    <div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Search for *.class files in the repository. Store all findings in variable CLUTTER</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">CLUTTER</span><span class="o">=</span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="se">\*</span>.class<span class="k">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># If variable CLUTTER is not empty, return error cod 1, otherwise exist with success code 0.</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="nv">$CLUTTER</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="k">fi</span>
+</code></pre></div></li>
+<li>Après les modifications apportées à votre fichier <code>.gitlab-ci.yml</code>, créez un nouveau commit sur une nouvelle branche.</li>
+<li>Émettez une demande de fusion et vérifiez que le pipeline CI a été activé.</li>
+<li>Acceptez la demande de fusion.</li>
+<li>Compilez votre projet en utilisant <code>mvn clean compile</code>.</li>
+<li>Faites un autre commit et poussez. Vérifiez que le pipeline rejette votre commit le plus récent.</li>
+</ul>
+<h3 id="maven-atomique">Maven atomique</h3>
+<p>Dans ce cours, vous avez déjà appris à configurer Maven pour exécuter des contrôles de qualité sur votre code.
+Un premier pipeline significatif consiste à appeler tout le cycle de vie Maven par un seul runner.</p>
+<h3 id="a-vous-de-jouer_3">À vous de jouer</h3>
+<p>Configurez un pipeline Maven atomique fonctionnel :</p>
+<ol>
+<li>Créez un nouveau runner qui appelle <code>mvn clean package -B</code>.</li>
+<li>Faites un commit sur une nouvelle branche <code>atomicmaven</code>.</li>
+<li>Vérifiez que le pipeline passe.</li>
+</ol>
+<p>Vérifiez que le pipeline rejette un code défectueux :</p>
+<ol>
+<li>Apportez une modification du code qui empêche la compilation, par exemple, supprimez un <code>;</code> à la fin d'une ligne de code.</li>
+<li>Faites un commit et poussez à nouveau.</li>
+<li>Vérifiez que le pipeline échoue maintenant.</li>
+</ol>
+<h3 id="phases-maven">Phases Maven</h3>
+<p>Jusqu'à présent, nous avons exécuté toutes les phases de Maven jusqu'à <code>package</code> dans un seul runner.</p>
+<ul>
+<li>Malheureusement, ce n'est pas un pipeline très sophistiqué. En cas d'échec, nous ne voyons pas facilement la raison.</li>
+<li>Une meilleure approche consiste à associer les <code>stages</code> CI de GitLab aux différentes <code>phases</code> de Maven afin d'obtenir des retours plus détaillés sur ce qui se passe.</li>
+</ul>
+<h4 id="a-vous-de-jouer_4">À vous de jouer</h4>
+<ol>
+<li>Surcharger les stages CI par défaut, en définissant une nouvelle étape pour chaque phase du cycle de vie Maven par défaut.</li>
+<li>Définir un runner individuel pour chaque phase de Maven jusqu'à (y compris) <code>install</code> :<ol>
+<li>Le premier runner appelle <code>validate</code>.</li>
+<li>Le deuxième runner appelle <code>...</code>.</li>
+<li>...</li>
+</ol>
+</li>
+<li>Faites un commit et poussez votre configuration de pipeline.</li>
+<li>Vérifiez que le pipeline affiche maintenant des stages individuels pour chaque phase du cycle de vie Maven.</li>
+</ol>
+<h3 id="optimisation-des-stages">Optimisation des stages</h3>
+<p>La configuration CI précédente est quelque peu gourmande en 
+ressources, car les phases Maven précédentes sont répétées par plusieurs
+ runners, gaspillant ainsi du temps CPU et ralentissant l'exécution du 
+pipeline.</p>
+<ul>
+<li>Malheureusement, il n'est pas possible d'exécuter des phases Maven individuelles de manière isolée.</li>
+<li>Il est cependant possible d'inclure certaines optimisations, afin d'éviter d'exécuter plusieurs fois les mêmes <em>plugins</em>.</li>
+</ul>
+<p>Les paramètres Maven ci-dessous peuvent être utilisés pour ignorer certains plugins Maven spécifiques :</p>
+<ul>
+<li><code>-DskipTests</code> ignore les tests unitaires, les tests d'intégration et les rapports de couverture lors des phases <code>test</code> et <code>validate</code>.</li>
+<li><code>-Djacoco.skip=true</code> ignore les rapports de couverture lors des phases <code>test</code> et <code>validate</code>.</li>
+<li><code>-Dcheckstyle.skip=true</code> ignore la vérification Checkstyle lors de la phase <code>verify</code>.</li>
+<li><code>-Dmaven.javadoc.skip=true</code> ignore la vérification et la génération de javadoc lors de la phase <code>package</code>.</li>
+</ul>
+<p>Cela peut être pris en compte pour différents runners Maven :</p>
+<ul>
+<li>Checkstyle est associé à la phase <code>validate</code> : nous pouvons ignorer l'exécution de Checkstyle pour toutes les phases suivantes. Vérifier une fois suffit.</li>
+</ul>
+<h4 id="a-vous-de-jouer_5">À vous de jouer</h4>
+<ul>
+<li>Modifiez les commandes Maven de vos runners précédents pour ignorer 
+les plugins Maven qui ont déjà rempli leur rôle lors des étapes 
+précédentes.</li>
+<li>Vérifiez que votre pipeline fonctionne toujours correctement, c'est-à-dire qu'il détecte toujours :<ul>
+<li>Les violations de Checkstyle</li>
+<li>Les javadocs manquants</li>
+<li>Les tests échoués</li>
+</ul>
+</li>
+</ul>
+<h3 id="extraction-des-artefacts">Extraction des artefacts</h3>
+<p>JUnit et Jacoco produisent tous deux des artefacts au-delà de "<em>Succès</em>" ou "<em>Échec</em>" qui peuvent fournir des détails utiles sur la qualité d'un commit :</p>
+<ul>
+<li>Rapports de tests détaillés : Quels tests ont réussi ou échoué.</li>
+<li>Rapports de couverture : Quel pourcentage de lignes de code est couvert par des tests.</li>
+<li>JavaDoc : Code HTML du site web.</li>
+</ul>
+<p>Une bonne configuration CI fournit, pour chaque commit, des 
+informations faciles à capturer, ainsi que des métriques de succès ou 
+d'échec.</p>
+<h4 id="a-vous-de-jouer-rapports-junit">À vous de jouer : Rapports JUnit</h4>
+<ul>
+<li>Le plugin <em>Surefire</em> (qui exécute les tests unitaires et d'intégration) génère un rapport de tests détaillé dans : <code>target/surefire-reports/</code>.</li>
+<li>GitLab peut utiliser ces rapports pour afficher des informations sur
+ les résultats individuels des tests lors de l'exécution du pipeline CI.</li>
+<li>Indiquez à GitLab de récupérer ces artefacts depuis le runner avec :
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">maven-verify</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">verify</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"mvn</span><span class="nv"> </span><span class="s">clean</span><span class="nv"> </span><span class="s">verify</span><span class="nv"> </span><span class="s">-Dcheckstyle.skip=true</span><span class="nv"> </span><span class="s">-Dmaven.javadoc.skip=true</span><span class="nv"> </span><span class="s">-B"</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">reports</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="nt">junit</span><span class="p">:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">target/surefire-reports/TEST-*.xml</span>
+</code></pre></div></li>
+</ul>
+<h4 id="a-vous-de-jouer-rapports-jacoco">À vous de jouer : Rapports Jacoco</h4>
+<ul>
+<li>Le plugin Jacoco peut générer des rapports de couverture pour les 
+tests unitaires et d'intégration combinés, avec la configuration 
+suivante (invocée lors de la phase <code>verify</code>) :<br>
+    <div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">&lt;!-- Plugin for coverage report --&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cm">&lt;!-- Visual test report available at:  target/site/jacoco/index.html --&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cm">&lt;!-- Plugin for coverage report --&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cm">&lt;!-- Visual test report available at:  target/site/jacoco/index.html --&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="cm">&lt;!-- machine readable report at: target//site/jacoco/jacoco.xml --&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.jacoco<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>jacoco-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.8.12<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">&lt;configuration&gt;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nt">&lt;excludes&gt;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="cm">&lt;!-- ignore view package --&gt;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="nt">&lt;exclude&gt;</span>**/view/*<span class="nt">&lt;/exclude&gt;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="nt">&lt;/excludes&gt;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="nt">&lt;/configuration&gt;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="nt">&lt;executions&gt;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">        </span><span class="nt">&lt;execution&gt;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">            </span><span class="nt">&lt;goals&gt;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                </span><span class="nt">&lt;goal&gt;</span>prepare-agent<span class="nt">&lt;/goal&gt;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">            </span><span class="nt">&lt;/goals&gt;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="nt">&lt;/execution&gt;</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="cm">&lt;!-- Associate with verify phase, to grab unit AND integration test results.--&gt;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">        </span><span class="nt">&lt;execution&gt;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">            </span><span class="nt">&lt;id&gt;</span>report<span class="nt">&lt;/id&gt;</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">            </span><span class="nt">&lt;phase&gt;</span>verify<span class="nt">&lt;/phase&gt;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">            </span><span class="nt">&lt;goals&gt;</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">                </span><span class="nt">&lt;goal&gt;</span>report<span class="nt">&lt;/goal&gt;</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">            </span><span class="nt">&lt;/goals&gt;</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">        </span><span class="nt">&lt;/execution&gt;</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">        </span><span class="nt">&lt;execution&gt;</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">            </span><span class="nt">&lt;id&gt;</span>jacoco-check<span class="nt">&lt;/id&gt;</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">            </span><span class="nt">&lt;goals&gt;</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">                </span><span class="nt">&lt;goal&gt;</span>check<span class="nt">&lt;/goal&gt;</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">            </span><span class="nt">&lt;/goals&gt;</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">            </span><span class="nt">&lt;configuration&gt;</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">                </span><span class="nt">&lt;rules&gt;</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">                    </span><span class="nt">&lt;rule&gt;</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">                        </span><span class="nt">&lt;element&gt;</span>PACKAGE<span class="nt">&lt;/element&gt;</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">                        </span><span class="nt">&lt;limits&gt;</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">                            </span><span class="nt">&lt;limit&gt;</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">                                </span><span class="nt">&lt;counter&gt;</span>LINE<span class="nt">&lt;/counter&gt;</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">                                </span><span class="nt">&lt;value&gt;</span>COVEREDRATIO<span class="nt">&lt;/value&gt;</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">                                </span><span class="nt">&lt;minimum&gt;</span>80%<span class="nt">&lt;/minimum&gt;</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">                            </span><span class="nt">&lt;/limit&gt;</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">                        </span><span class="nt">&lt;/limits&gt;</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">                    </span><span class="nt">&lt;/rule&gt;</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">                </span><span class="nt">&lt;/rules&gt;</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">            </span><span class="nt">&lt;/configuration&gt;</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">        </span><span class="nt">&lt;/execution&gt;</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">    </span><span class="nt">&lt;/executions&gt;</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></li>
+<li>Un rapport de test se trouve dans : <code>target/site/jacoco/index.html</code>.</li>
+<li>Cependant, GitLab a besoin du rapport non pas en HTML, mais dans un format lisible.</li>
+<li>L'astuce consiste à ajouter une ligne Linux qui extrait la couverture totale à partir du rapport de test :
+  <code>cat target/site/jacoco/index.html | grep -o 'Total[^%]*%' | sed 's/&lt;.*&gt;/ /; s/Total/Jacoco Coverage Total:/'</code></li>
+<li>GitLab sait comment consommer cette ligne imprimée dans la console 
+du runner. Il suffit de signaler son existence avec le mot-clé <code>coverage</code>.</li>
+<li>
+<p>En utilisant à la fois Maven et la commande <code>cat</code>, nous pouvons renvoyer le rapport de couverture totale au pipeline GitLab :<br>
+    </p><div class="highlight"><pre><span></span><code tabindex="0"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">maven-verify</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">verify</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"mvn</span><span class="nv"> </span><span class="s">clean</span><span class="nv"> </span><span class="s">verify</span><span class="nv"> </span><span class="s">-Dcheckstyle.skip=true</span><span class="nv"> </span><span class="s">-Dmaven.javadoc.skip=true</span><span class="nv"> </span><span class="s">-B"</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"cat</span><span class="nv"> </span><span class="s">target/site/jacoco/index.html</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">grep</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">'Total[^%]*%'</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">sed</span><span class="nv"> </span><span class="s">'s/&lt;.*&gt;/</span><span class="nv"> </span><span class="s">/;</span><span class="nv"> </span><span class="s">s/Total/Jacoco</span><span class="nv"> </span><span class="s">Coverage</span><span class="nv"> </span><span class="s">Total:/'"</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="s">'/Total.*?([0-9]{1,3})%/'</span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Configurez le pipeline comme décrit, laissez-le s'exécuter et vérifiez l'onglet <code>jobs</code> dans votre pipeline finalisé.</p>
+</li>
+<li>Vérifiez que le dernier job affiche un nombre de couverture.</li>
+</ul>
+<h4 id="a-vous-de-jouer-apidoc">À vous de jouer : ApiDoc</h4>
+<ul>
+<li>Le plugin <code>javadoc</code> crée un dossier : <code>target/apidocs</code>.</li>
+<li>Exécutez l'extraction du dossier pour le déployer, en utilisant le mot-clé <code>artifact</code> :
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">pages</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"mvn</span><span class="nv"> </span><span class="s">clean</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">-Dcheckstyle.skip=true</span><span class="nv"> </span><span class="s">-DskipTests</span><span class="nv"> </span><span class="s">-B"</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"mv</span><span class="nv"> </span><span class="s">target/apidocs</span><span class="nv"> </span><span class="s">public"</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span>
+</code></pre></div></li>
+<li>Attendez que le pipeline s'exécute.</li>
+<li>Allez dans : <code>Déployer -&gt; Pages</code>, assurez-vous que les pages du projet sont activées. Désactivez la case à cocher <code>domaine unique</code>.</li>
+<li>Vérifiez que la documentation de votre projet est accessible à l'adresse suivante : <a href="https://yourgitlabname.pages.info.uqam.ca/yourproject/">https://yourgitlabname.pages.info.uqam.ca/yourproject/</a></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Le job <strong>doit</strong> être nommé <code>pages</code></p>
+<p>Afin que le site Web soit accessible via <code>Déployer -&gt; Pages</code>, il est important que le nom du job soit <code>pages</code>. Sinon, le pipeline s'exécutera correctement, mais aucun site Web ne sera accessible.</p>
+</div>
+<h2 id="readme-en-markdown">README en Markdown</h2>
+<p>En cours, vous avez déjà vu trois langages de balisage textuels pour les fichiers de configuration :</p>
+<ul>
+<li><code>XML</code>, pour Maven</li>
+<li><code>JSON</code>, pour la sérialisation d'objets et Gradle</li>
+<li><code>YAML</code>, pour la configuration du pipeline GitLab CI</li>
+</ul>
+<p>Tous ces langages sont destinés à l'interprétation par des machines, 
+c'est-à-dire que nous les écrivons pour fournir des instructions aux 
+machines.</p>
+<ul>
+<li>Les langages de balisage ne sont pas nécessairement destinés aux 
+machines : La syntaxe Markdown est un langage simple de modélisation 
+pour décrire des documents structurés destinés aux humains.</li>
+<li>Le Markdown peut être facilement compilé en HTML, la documentation du cours en est un exemple.<ul>
+<li>GitHub / GitLab rend automatiquement les fichiers markdown en HTML lorsqu'un fichier <code>.md</code> est sélectionné dans leur interface web.</li>
+<li>IntelliJ propose une vue partagée (<a href="https://www.jetbrains.com/help/idea/markdown.html">plugin activé par défaut</a>) pour les fichiers Markdown, permettant de prévisualiser instantanément le code HTML tout en rédigeant :</li>
+</ul>
+</li>
+</ul>
+<p><img src="atelier10_files/markdown-basics.png" width="90%" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<h3 id="fichier-readmemd-du-projet">Fichier README.md du projet</h3>
+<p>Pour les projets logiciels, il est de bonne pratique de placer un fichier <code>README.md</code> à la racine du projet.</p>
+<ul>
+<li>Si le fichier existe, le serveur Git affichera automatiquement le contenu comme description du projet.</li>
+<li>Ce fichier est un point de départ recommandé pour conseiller les utilisateurs du logiciel sur :<ul>
+<li>Le titre et l'intérêt du projet</li>
+<li>Comment télécharger et installer le projet (pour les non-développeurs, c'est-à-dire les utilisateurs) :<ul>
+<li>Où / comment obtenir le projet compilé</li>
+<li>Quelle commande utiliser pour lancer le projet</li>
+</ul>
+</li>
+<li>Comment obtenir les sources et contribuer (pour les développeurs) :<ul>
+<li>Les prérequis du projet, c'est-à-dire ce qui doit être installé pour compiler le projet.</li>
+<li>Comment accéder à la documentation API</li>
+</ul>
+</li>
+<li>Auteurs / mentions de contribution</li>
+<li>Si applicable : licences du logiciel</li>
+</ul>
+</li>
+<li>La syntaxe Markdown est extrêmement simple et peut être utilisée pour divers cas.</li>
+<li>Par exemple, la documentation du projet XoxInternals peut être inspectée ici : <a href="https://github.com/m5c/XoxInternals/blob/master/README.md">README XoxInternals</a>.</li>
+</ul>
+<h4 id="a-vous-de-jouer_6">À vous de jouer</h4>
+<p>Familiarisez-vous avec les concepts de base de la syntaxe markdown, en utilisant : <a href="https://pbs.twimg.com/media/FcLhxbkXEAAnH8b?format=jpg&amp;name=large">CETTE référence de syntaxe</a>.</p>
+<ul>
+<li>Titres, sous-titres</li>
+<li>Texte <strong>gras</strong>, <em>italique</em>, <del>barré</del></li>
+<li>Listes et énumérations :<ol>
+<li>Premier élément</li>
+<li>Deuxième élément</li>
+<li>...</li>
+</ol>
+</li>
+<li><a href="https://www.markdownguide.org/basic-syntax/">Hyperliens</a></li>
+<li>
+<p>Citations :</p>
+<blockquote>
+<p>"Bruih ? Miow miooooow ! Croquettes !!" -- Keksli</p>
+</blockquote>
+</li>
+<li>
+<p>Lignes et blocs de code :</p>
+<ul>
+<li><code>Une ligne de code</code></li>
+<li>Et aussi :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Multiple</span><span class="w"> </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">lines</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">of</span><span class="w"> </span><span class="n">code</span><span class="p">.</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>Ajoutez un fichier README.md à votre projet de test, créez une 
+documentation très minimale pour le titre du projet et les instructions 
+d'exécution.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+        
+          
+          <a href="https://inf2050.uqam.ca/fr/ci.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Continuous Integration">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Continuous Integration
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="atelier10_files/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="atelier10_files/extra.js"></script>
+      
+    
+  
+</body></html>

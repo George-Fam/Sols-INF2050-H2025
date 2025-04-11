@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html class="js-focus-visible js" lang="fr" data-js-focus-visible=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link href="https://inf2050.uqam.ca/fr/atelier07.html" rel="canonical">
+<link href="https://inf2050.uqam.ca/fr/vcs-2.html" rel="prev">
+<link href="https://inf2050.uqam.ca/fr/assets/favicon-32.png" rel="icon">
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.31" name="generator">
+<!--Support for native app on iOS devices-->
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="viewport-fit=cover, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1" name="viewport">
+<link href="https://inf2050.uqam.ca/fr/assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="https://inf2050.uqam.ca/fr/assets/images/favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="https://inf2050.uqam.ca/fr/assets/images/favicon-16.png" rel="icon" sizes="16x16" type="image/png">
+<link crossorigin="use-credentials" href="https://inf2050.uqam.ca/manifest.json" rel="manifest">
+<meta content="INF-2050" name="apple-mobile-web-app-title">
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+<meta charset="utf-8">
+<link href="atelier07_files/main.3cba04c6.min.css" rel="stylesheet">
+<link href="atelier07_files/palette.06af60db.min.css" rel="stylesheet">
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect">
+<link href="atelier07_files/css.css" rel="stylesheet">
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="atelier07_files/extra.css" rel="stylesheet">
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="blue" data-md-color-primary="indigo" data-md-color-scheme="blinded" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox">
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox">
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#atelier-07">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="INF2050" class="md-header__button md-logo" data-md-component="logo" href="https://inf2050.uqam.ca/fr/index.html" title="INF2050">
+<img alt="logo" src="atelier07_files/logo.png">
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title md-header__title--active" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            INF2050
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Atelier 07
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="none" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text">
+<label class="md-search__icon md-icon" for="__search">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">Taper pour démarrer la recherche</div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" style="top: 48px;">
+<div class="md-sidebar__scrollwrap" style="height: 1362.8px;">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="INF2050" class="md-nav__button md-logo" data-md-component="logo" href="https://inf2050.uqam.ca/fr/index.html" title="INF2050">
+<img alt="logo" src="atelier07_files/logo.png">
+</a>
+    INF2050
+  </label>
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/index.html">
+<span class="md-ellipsis">
+    Bienvenue
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/atelier01.html">
+<span class="md-ellipsis">
+    Atelier 01
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/introduction.html">
+<span class="md-ellipsis">
+    Les élements de style
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/atelier02.html">
+<span class="md-ellipsis">
+    Atelier 02
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/0tp.html">
+<span class="md-ellipsis">
+    TP 00
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/vcs-1.html">
+<span class="md-ellipsis">
+    Contrôle de Version I
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/atelier03.html">
+<span class="md-ellipsis">
+    Atelier 03
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/1tp.html">
+<span class="md-ellipsis">
+    TP 01
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/build-systems-1.html">
+<span class="md-ellipsis">
+    Systèmes de construction I
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/atelier04.html">
+<span class="md-ellipsis">
+    Atelier 04
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/ides.html">
+<span class="md-ellipsis">
+    IDEs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/atelier05.html">
+<span class="md-ellipsis">
+    Atelier 05
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/testing-1.html">
+<span class="md-ellipsis">
+    Testing I
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/atelier06.html">
+<span class="md-ellipsis">
+    Atelier 06
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/2tp.html">
+<span class="md-ellipsis">
+    TP 02
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://inf2050.uqam.ca/fr/vcs-2.html">
+<span class="md-ellipsis">
+    Contrôle de Version II
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox">
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Atelier 07
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="https://inf2050.uqam.ca/fr/atelier07.html">
+<span class="md-ellipsis">
+    Atelier 07
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#preparation">
+<span class="md-ellipsis">
+      Préparation
+    </span>
+</a>
+<nav aria-label="Préparation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creer-un-depot-de-test">
+<span class="md-ellipsis">
+      Créer un dépôt de test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creer-un-fichier-markdown">
+<span class="md-ellipsis">
+      Créer un fichier markdown
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creation-de-commits-dexemple">
+<span class="md-ellipsis">
+      Création de commits d'exemple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#journalisation-des-commits-dog-logging">
+<span class="md-ellipsis">
+      Journalisation des commits (Dog logging)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#nouvelles-branches">
+<span class="md-ellipsis">
+      Nouvelles branches
+    </span>
+</a>
+<nav aria-label="Nouvelles branches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creation-dune-nouvelle-branche">
+<span class="md-ellipsis">
+      Création d'une nouvelle branche
+    </span>
+</a>
+<nav aria-label="Création d'une nouvelle branche" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#changer-de-branche">
+<span class="md-ellipsis">
+      Changer de branche
+    </span>
+</a>
+<nav aria-label="Changer de branche" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_1">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#commits-avec-head-detache">
+<span class="md-ellipsis">
+      Commits avec HEAD détaché
+    </span>
+</a>
+<nav aria-label="Commits avec HEAD détaché" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_2">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-merging">
+<span class="md-ellipsis">
+      Fusion (Merging)
+    </span>
+</a>
+<nav aria-label="Fusion (Merging)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-sans-conflit">
+<span class="md-ellipsis">
+      Fusion sans conflit
+    </span>
+</a>
+<nav aria-label="Fusion sans conflit" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_3">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-avec-resolution-automatique-de-conflits">
+<span class="md-ellipsis">
+      Fusion avec résolution automatique de conflits
+    </span>
+</a>
+<nav aria-label="Fusion avec résolution automatique de conflits" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_4">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-avec-conflit">
+<span class="md-ellipsis">
+      Fusion avec conflit
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#suppression-de-branches">
+<span class="md-ellipsis">
+      Suppression de branches
+    </span>
+</a>
+<nav aria-label="Suppression de branches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#local">
+<span class="md-ellipsis">
+      Local
+    </span>
+</a>
+<nav aria-label="Local" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_5">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#remote">
+<span class="md-ellipsis">
+      Remote
+    </span>
+</a>
+<nav aria-label="Remote" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_6">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#etiquetage-tagging">
+<span class="md-ellipsis">
+      Étiquetage (Tagging)
+    </span>
+</a>
+<nav aria-label="Étiquetage (Tagging)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#ajout-detiquettes">
+<span class="md-ellipsis">
+      Ajout d'étiquettes
+    </span>
+</a>
+<nav aria-label="Ajout d'étiquettes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_7">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#cherry-picking">
+<span class="md-ellipsis">
+      Cherry Picking
+    </span>
+</a>
+<nav aria-label="Cherry Picking" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#cherry-pick-dune-seule-ligne-du-poeme">
+<span class="md-ellipsis">
+      Cherry-pick d'une seule ligne du poème
+    </span>
+</a>
+<nav aria-label="Cherry-pick d'une seule ligne du poème" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_8">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#rebase">
+<span class="md-ellipsis">
+      Rebase
+    </span>
+</a>
+<nav aria-label="Rebase" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#rebase-dune-branche-feature">
+<span class="md-ellipsis">
+      Rebase d'une branche feature
+    </span>
+</a>
+<nav aria-label="Rebase d'une branche feature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed md-nav__link--active" href="#a-vous-de-jouer_9">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" style="top: 48px;">
+<div class="md-sidebar__scrollwrap" style="height: 1362.8px;">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#preparation">
+<span class="md-ellipsis">
+      Préparation
+    </span>
+</a>
+<nav aria-label="Préparation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creer-un-depot-de-test">
+<span class="md-ellipsis">
+      Créer un dépôt de test
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creer-un-fichier-markdown">
+<span class="md-ellipsis">
+      Créer un fichier markdown
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creation-de-commits-dexemple">
+<span class="md-ellipsis">
+      Création de commits d'exemple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#journalisation-des-commits-dog-logging">
+<span class="md-ellipsis">
+      Journalisation des commits (Dog logging)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#nouvelles-branches">
+<span class="md-ellipsis">
+      Nouvelles branches
+    </span>
+</a>
+<nav aria-label="Nouvelles branches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#creation-dune-nouvelle-branche">
+<span class="md-ellipsis">
+      Création d'une nouvelle branche
+    </span>
+</a>
+<nav aria-label="Création d'une nouvelle branche" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#changer-de-branche">
+<span class="md-ellipsis">
+      Changer de branche
+    </span>
+</a>
+<nav aria-label="Changer de branche" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_1">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#commits-avec-head-detache">
+<span class="md-ellipsis">
+      Commits avec HEAD détaché
+    </span>
+</a>
+<nav aria-label="Commits avec HEAD détaché" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_2">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-merging">
+<span class="md-ellipsis">
+      Fusion (Merging)
+    </span>
+</a>
+<nav aria-label="Fusion (Merging)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-sans-conflit">
+<span class="md-ellipsis">
+      Fusion sans conflit
+    </span>
+</a>
+<nav aria-label="Fusion sans conflit" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_3">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-avec-resolution-automatique-de-conflits">
+<span class="md-ellipsis">
+      Fusion avec résolution automatique de conflits
+    </span>
+</a>
+<nav aria-label="Fusion avec résolution automatique de conflits" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_4">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#fusion-avec-conflit">
+<span class="md-ellipsis">
+      Fusion avec conflit
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#suppression-de-branches">
+<span class="md-ellipsis">
+      Suppression de branches
+    </span>
+</a>
+<nav aria-label="Suppression de branches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#local">
+<span class="md-ellipsis">
+      Local
+    </span>
+</a>
+<nav aria-label="Local" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_5">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#remote">
+<span class="md-ellipsis">
+      Remote
+    </span>
+</a>
+<nav aria-label="Remote" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_6">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#etiquetage-tagging">
+<span class="md-ellipsis">
+      Étiquetage (Tagging)
+    </span>
+</a>
+<nav aria-label="Étiquetage (Tagging)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#ajout-detiquettes">
+<span class="md-ellipsis">
+      Ajout d'étiquettes
+    </span>
+</a>
+<nav aria-label="Ajout d'étiquettes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_7">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#cherry-picking">
+<span class="md-ellipsis">
+      Cherry Picking
+    </span>
+</a>
+<nav aria-label="Cherry Picking" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#cherry-pick-dune-seule-ligne-du-poeme">
+<span class="md-ellipsis">
+      Cherry-pick d'une seule ligne du poème
+    </span>
+</a>
+<nav aria-label="Cherry-pick d'une seule ligne du poème" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#a-vous-de-jouer_8">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#rebase">
+<span class="md-ellipsis">
+      Rebase
+    </span>
+</a>
+<nav aria-label="Rebase" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed" href="#rebase-dune-branche-feature">
+<span class="md-ellipsis">
+      Rebase d'une branche feature
+    </span>
+</a>
+<nav aria-label="Rebase d'une branche feature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link md-nav__link--passed md-nav__link--active" href="#a-vous-de-jouer_9">
+<span class="md-ellipsis">
+      À vous de jouer
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="atelier-07">Atelier 07</h1>
+<p>Dans cette session de laboratoire, vous allez pratiquer des 
+fonctionnalités avancées de la ligne de commande de git, notamment des 
+stratégies pour combiner le travail de plusieurs fonctionnalités sur la 
+branche <code>main</code>.
+Vous n'avez pas besoin de code spécifique pour suivre cette session de laboratoire.</p>
+<h2 id="preparation">Préparation</h2>
+<p>Vous travaillerez avec un dépôt de test pour le reste du laboratoire.
+Avant de commencer les exercices réels, voici quelques étapes préparatoires.</p>
+<h3 id="creer-un-depot-de-test">Créer un dépôt de test</h3>
+<ol>
+<li>Créez un nouveau dossier vide sur votre bureau. (Ou ailleurs selon votre préférence)</li>
+<li>Ouvrez un terminal et naviguez <strong>à l'intérieur</strong> du dossier nouvellement créé.</li>
+<li>Initialisez un nouveau dépôt avec <code>git init</code>.</li>
+</ol>
+<h3 id="creer-un-fichier-markdown">Créer un fichier markdown</h3>
+<ul>
+<li>Vous ne travaillerez pas avec du code réel, le reste de la session 
+de laboratoire nécessite simplement un court poème au format markdown.<ul>
+<li>Suivre les changements du poème exemple vous permettra de simuler le contrôle de version, par exemple en utilisant des branches.</li>
+</ul>
+</li>
+<li>À l'intérieur de votre dépôt de test, créez un nouveau fichier texte : "keksli.md".</li>
+<li>
+<p>Collez le fichier du poème suivant, puis enregistrez le fichier :
+  </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh"># Keksli, the Little Piece of Cake</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>1) Oh Keksli, sweet as frosting’s kiss,
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>2) A tiny fluff of gentle bliss.
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>3) With eyes that sparkle, soft and bright,
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>4) You bring the world pure joy and light.
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>5) A little piece of cake, they say,
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>6) But cuter than the sweetest tray.
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>7) With every purr and playful leap,
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>8) You melt our hearts and softly keep—
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>9) That sprinkle of sweetness, warm and true,
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>10) A Keksli-sized delight in all you do.
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Ajoutez le fichier à votre dépôt et créez un commit initial :
+  </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>add<span class="w"> </span>keksli.md
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Added initial poem"</span><span class="w"> </span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Sauvegardez le dossier de test dans son état actuel, par exemple en en faisant une copie ou en le compressant.</p>
+</li>
+<li>Je vous demanderai régulièrement de réinitialiser l'état initial. 
+Dans ce cas, supprimez le dossier original et restaurez-le depuis votre 
+sauvegarde sur le disque.</li>
+</ul>
+<h3 id="creation-de-commits-dexemple">Création de commits d'exemple</h3>
+<p>Tout au long du reste du laboratoire, je vous demanderai fréquemment 
+de modifier le poème et d'ajouter la version modifiée dans un nouveau 
+commit.</p>
+<ul>
+<li>Si je ne précise pas quelle ligne modifier, ajoutez simplement une nouvelle ligne à la fin avec <code>...</code>. Sinon, modifiez la ligne spécifiée (<code>1)</code>, <code>2)</code>, ...).</li>
+<li>Enfin, assurez-vous que la modification de votre poème soit bien enregistrée dans un nouveau commit, avec :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git add keksli.md
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>git commit -m "Modified poem" 
+</code></pre></div>
+<ul>
+<li>Vous pouvez utiliser un message de commit personnalisé si vous le souhaitez, pour une meilleure traçabilité.</li>
+</ul>
+<h3 id="journalisation-des-commits-dog-logging">Journalisation des commits (Dog logging)</h3>
+<ul>
+<li>La commande standard <code>git log</code> n'affiche ni l'intégralité du graphe, ni ne visualise proprement la façon dont les commits sont liés.</li>
+<li>En classe, vous avez vu l'acronyme ADOG, comme aide-mémoire pour la commande plus longue :<br>
+<code>git log --all --decorate --oneline --graph</code></li>
+<li>Créez un alias pour l'acronyme ADOG, avec :<br>
+<code>git config --global alias.adog "log --all --decorate --oneline --graph"</code></li>
+<li>Testez la nouvelle commande d'alias. Allez dans votre dépôt de test et tapez : <code>git adog</code></li>
+</ul>
+<h2 id="nouvelles-branches">Nouvelles branches</h2>
+<p>Dans ce premier exercice, vous allez vous entraîner à créer de nouvelles branches et à naviguer entre les branches.</p>
+<h3 id="creation-dune-nouvelle-branche">Création d'une nouvelle branche</h3>
+<ul>
+<li>Les branches sont généralement créées pour chaque fonctionnalité. 
+Nous allons maintenant supposer que vous souhaitez créer une version 
+étendue du poème avec quelques lignes supplémentaires.</li>
+</ul>
+<h4 id="a-vous-de-jouer">À vous de jouer</h4>
+<ol>
+<li>Créez une nouvelle branche <code>extended-poem</code>, en utilisant <code>git checkout -b</code><ul>
+<li>Remarque : la commande <code>checkout</code> place automatiquement votre HEAD sur la nouvelle branche. Pas besoin de changer manuellement.</li>
+</ul>
+</li>
+<li>Modifiez le poème et créez un nouveau commit.</li>
+<li>Inspectez le graphe complet des commits avec <code>git adog</code><ul>
+<li>Lisez attentivement la sortie. Pourquoi le graphe visualisé est-il toujours une ligne ?</li>
+</ul>
+</li>
+</ol>
+<h3 id="changer-de-branche">Changer de branche</h3>
+<ul>
+<li>La commande universelle pour naviguer dans le graphe est <code>git checkout</code></li>
+<li><code>git checkout</code> attend soit un <em>hash de commit</em>, soit un <em>nom de branche</em>.<ul>
+<li>Les <em>hashs de commit</em> détachent le HEAD et le placent dans le commit demandé.</li>
+<li>Les <em>noms de branches</em> attachent le HEAD au dernier commit de la branche spécifiée.</li>
+</ul>
+</li>
+</ul>
+<details class="question">
+<summary>Y a-t-il une différence entre faire un checkout du dernier commit sur une branche et faire un checkout par nom de branche ?</summary>
+<p><strong>Oui, il y a une différence !</strong> Dans les deux cas, le 
+HEAD se retrouve sur le dernier commit d'une ligne. Mais un checkout par
+ hash de commit ne peut pas toujours aboutir à un HEAD attaché, car les 
+commits peuvent être partagés par plusieurs branches.<br>
+Illustration :
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>*   059ba92 (HEAD, main, feature) fixed merge conflict
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>|\
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>| * e0a2244 feature XYZ implemented
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>* | ecf8311 little bugfix
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>|/
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>* 1a31ca2 initial commit
+</code></pre></div>
+Le commit <code>059ba92</code> est partagé par les branches <code>main</code> et <code>feature</code>. Un <code>git checkout 059ba92</code> ne peut pas être résolu en un nom de branche unique. <strong>HEAD sera détaché</strong>.<br>
+(En fait, un checkout par hash <strong>détache toujours</strong> HEAD, simplement pour éviter l'ambiguïté ci-dessus !)<p></p>
+</details>
+<ul>
+<li><code>git switch</code> est un peu plus sécurisé que <code>git checkout</code>, car il s'agit d'une variante de <code>checkout</code> qui n'accepte que les noms de branches.<ul>
+<li>Avec <code>git switch</code>, vous ne pouvez jamais vous retrouver dans un état HEAD détaché.</li>
+<li>Naviguer entre les branches avec <code>git switch</code> est préférable pour les utilisateurs novices.</li>
+</ul>
+</li>
+</ul>
+<h4 id="a-vous-de-jouer_1">À vous de jouer</h4>
+<ol>
+<li>Revenez à la branche <code>main</code>.</li>
+<li>Modifiez le poème et créez un nouveau commit.</li>
+<li>Inspectez à nouveau le graphe avec <code>git adog</code>. Qu'est-ce qui a changé ?</li>
+</ol>
+<h3 id="commits-avec-head-detache">Commits avec HEAD détaché</h3>
+<ul>
+<li>Habituellement, vous souhaitez que vos branches divergent d'un HEAD 
+attaché, c'est-à-dire que vous voulez que les branches partent de la <strong>fin</strong> d'une branche.</li>
+<li>Cependant, il est possible de créer des branches implicites en commettant tout en étant en HEAD détaché.<br>
+  Illustration :<ul>
+<li>Dans une série de deux commits, un checkout du commit initial entraîne un HEAD détaché.
+  <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>adog
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w"> </span>*<span class="w"> </span>adce8cb<span class="w"> </span><span class="o">(</span>main<span class="o">)</span><span class="w"> </span>second<span class="w"> </span>commit
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w"> </span>*<span class="w"> </span>3af628f<span class="w"> </span><span class="o">(</span>HEAD<span class="o">)</span><span class="w"> </span>initial<span class="w"> </span>commit
+</code></pre></div></li>
+<li>Créer un nouveau commit avec un HEAD détaché entrerait en conflit avec le <code>deuxième commit</code>.</li>
+<li>Git crée donc implicitement une nouvelle branche sans nom. (<code>HEAD</code> ne pointe pas vers un nom de branche !)
+  <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>adog
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w"> </span>*<span class="w"> </span>310e6b7<span class="w"> </span><span class="o">(</span>HEAD<span class="o">)</span><span class="w"> </span>commit<span class="w"> </span>from<span class="w"> </span>detached<span class="w"> </span>head
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w"> </span><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>adce8cb<span class="w"> </span><span class="o">(</span>main<span class="o">)</span><span class="w"> </span>second<span class="w"> </span>commit
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w"> </span><span class="p">|</span>/
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w"> </span>*<span class="w"> </span>3af628f<span class="w"> </span>initial<span class="w"> </span>commit
+</code></pre></div></li>
+</ul>
+</li>
+<li>Les commits depuis un HEAD détaché (comme le commit <code>310e6b7</code>
+ ci-dessus) sont dangereux, car ils ne sont associés à aucune branche et
+ sont difficiles à retrouver plus tard. Les travaux effectués avec un 
+HEAD détaché sont facilement perdus.</li>
+<li>Heureusement, il est possible d'associer ultérieurement les commits à un nom de branche !</li>
+</ul>
+<h4 id="a-vous-de-jouer_2">À vous de jouer</h4>
+<ol>
+<li>Réinitialisez le dépôt de test à son état original.</li>
+<li>Ajoutez un nouveau commit.<ul>
+<li>Inspectez le graphe du dépôt avec <code>git adog</code>. Vous ne devriez voir que deux commits consécutifs, avec HEAD attaché.</li>
+</ul>
+</li>
+<li>Détachez le HEAD, en effectuant un checkout du commit initial par son ID.<ul>
+<li>Inspectez à nouveau avec <code>git adog</code>, la sortie devrait correspondre au premier des listings ci-dessus.</li>
+</ul>
+</li>
+<li>Avec votre HEAD détaché, créez un nouveau commit.<ul>
+<li>Inspectez à nouveau votre graphe avec <code>git adog</code>. La sortie devrait maintenant correspondre au second des listings ci-dessus.</li>
+<li>Notez l'ID du commit créé en mode HEAD détaché.</li>
+</ul>
+</li>
+<li>Essayez d'abandonner votre dernier commit, en faisant un checkout de la branche <code>main</code>.<ul>
+<li>Git réattachera votre HEAD.</li>
+<li>Git émettra également un avertissement vous informant que vous 
+laissez un commit derrière. Git vous expliquera aussi comment associer 
+ce commit laissé derrière à une nouvelle branche.</li>
+</ul>
+</li>
+<li>Revenez au commit laissé derrière, en faisant un <code>checkout</code> (de l'ID que vous avez noté).</li>
+<li>Utilisez la commande précédemment proposée par git, pour associer le
+ commit laissé derrière à un nouveau nom de branche, par exemple <code>implicit-branch</code>.<ul>
+<li>Inspectez le graphe du dépôt une fois de plus avec <code>git adog</code>.</li>
+</ul>
+</li>
+</ol>
+<details class="question">
+<summary>Votre HEAD est-il maintenant attaché ?</summary>
+<p><strong>Non</strong>. <code>git adog</code> montre que HEAD est sur le dernier commit de <code>implicit-branch</code>. Mais il n'y a pas de symbole <code>-&gt;</code>. Le HEAD reste détaché tant que vous ne l'attachez pas avec <code>git checkout implicit-branch</code> (ou <code>git switch implicit-branch</code>).
+<strong>Avant</strong> d'attacher HEAD :
+    </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w"> </span>*<span class="w"> </span>310e6b7<span class="w"> </span><span class="o">(</span>HEAD,<span class="w"> </span>implicit-branch<span class="o">)</span><span class="w"> </span>commit<span class="w"> </span>from<span class="w"> </span>detached<span class="w"> </span>head
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w"> </span><span class="p">|</span><span class="w"> </span>*<span class="w"> </span>adce8cb<span class="w"> </span><span class="o">(</span>main<span class="o">)</span><span class="w"> </span>second<span class="w"> </span>commit
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w"> </span><span class="p">|</span>/
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w"> </span>*<span class="w"> </span>3af628f<span class="w"> </span>initial<span class="w"> </span>commit
+</code></pre></div>
+<strong>Après</strong> avoir attaché HEAD : (avec <code>git switch implicit-branch</code>)
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a> * 310e6b7 (HEAD -&gt; implicit-branch) commit from detached head
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a> | * adce8cb (main) second commit
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a> |/
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a> * 3af628f initial commit
+</code></pre></div><p></p>
+</details>
+<h2 id="fusion-merging">Fusion (Merging)</h2>
+<ul>
+<li>Jusqu'à présent, vous avez appris à créer de nouvelles branches.</li>
+<li>Les branches sont comme des chemins qui se séparent. À chaque branche créée, vous créez une nouvelle bifurcation.</li>
+<li>Ensuite, vous allez apprendre à les unir à nouveau. Ce processus s'appelle la fusion (merging).</li>
+</ul>
+<h3 id="fusion-sans-conflit">Fusion sans conflit</h3>
+<ul>
+<li>Dans le cas le plus simple, les changements effectués sur les deux 
+branches ne sont pas en conflit, par exemple parce que les changements 
+affectent des fichiers entièrement distincts.</li>
+<li>La procédure standard pour fusionner est :<ol>
+<li>Placez votre HEAD sur la branche où vous souhaitez recevoir / intégrer les changements : <code>git checkout receiving-branch</code></li>
+<li>Fusionnez depuis la branche contenant les changements que vous souhaitez intégrer : <code>git merge branch-with-commits-to-integrate</code></li>
+</ol>
+</li>
+</ul>
+<h4 id="a-vous-de-jouer_3">À vous de jouer</h4>
+<ol>
+<li>Restaurez le projet de test à son état original.</li>
+<li>Créez une nouvelle branche <code>feature</code>.</li>
+<li>Ajoutez un nouveau commit à la branche <code>feature</code>.</li>
+<li>Placez votre HEAD sur <code>main</code>.</li>
+<li>Créez un nouveau fichier <code>toto.md</code> avec le contenu <code># Hello</code> et enregistrez-le dans un nouveau commit sur <code>main</code>.</li>
+<li>Fusionnez la branche <code>feature</code> dans <code>main</code>.</li>
+<li>Vérifiez que la fusion a été réussie :<ul>
+<li>Vous devriez toujours avoir le fichier <code>toto.md</code>.</li>
+<li>Vous devriez aussi voir la version étendue du poème.</li>
+<li><code>git adog</code> devrait visualiser la fusion.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fusion-avec-resolution-automatique-de-conflits">Fusion avec résolution automatique de conflits</h3>
+<p>La fusion avec résolution automatique de conflits se produit lorsque 
+deux branches modifient le même fichier, mais de manière non 
+conflictuelle, c'est-à-dire pas sur la même ligne ou le même élément de 
+code.</p>
+<h4 id="a-vous-de-jouer_4">À vous de jouer</h4>
+<ol>
+<li>Restaurez le projet de test à son état original.</li>
+<li>Créez une nouvelle branche <code>feature</code>.</li>
+<li>Ajoutez un nouveau commit à la branche <code>feature</code>, où la première ligne du poème est modifiée en <code>1) Oh Keksli, sweet as a nutella kiss,</code></li>
+<li>Placez votre HEAD sur <code>main</code>.</li>
+<li>Ajoutez un nouveau commit à la branche <code>main</code>, où la dernière ligne du poème est modifiée en <code>10) Oh Keksli-sized delight, we all love you. &lt;3</code></li>
+<li>Fusionnez la branche <code>feature</code> dans <code>main</code>.<ul>
+<li>À ce stade, vous pourriez voir un éditeur étrange s'ouvrir.</li>
+<li>Il s'agit de <a href="https://www.vim.org/">VIM</a>, un éditeur de texte puissant, mais peu intuitif.</li>
+<li>Pour quitter l'éditeur, tapez cette séquence : <code>ESC : w q ENTER</code> (pour <strong>w</strong>rite et <strong>q</strong>uitter l'éditeur).</li>
+</ul>
+</li>
+<li>Vérifiez que la fusion a été réussie :<ul>
+<li>Inspectez le message de sortie de <code>git</code> pour un message de succès.</li>
+<li>Inspectez le contenu du fichier <code>keksli.md</code> et vérifiez que la première et la dernière ligne du poème ont été modifiées.</li>
+<li><code>git adog</code> devrait visualiser la fusion.</li>
+</ul>
+</li>
+</ol>
+<h3 id="fusion-avec-conflit">Fusion avec conflit</h3>
+<ol>
+<li>Restaurez le projet de test à son état original.</li>
+<li>Créez une nouvelle branche <code>feature</code>.</li>
+<li>Ajoutez un nouveau commit à la branche <code>feature</code>, où la première ligne du poème est modifiée en "1) Oh Keksli, sweet as a nutella kiss,"</li>
+<li>Placez votre HEAD sur <code>main</code>.</li>
+<li>Ajoutez un nouveau commit à la branche <code>main</code>, où la première ligne du poème est modifiée en "1) Oh Keksli, sweet as a maple syrup kiss,"</li>
+<li>Fusionnez la branche <code>feature</code> dans <code>main</code>.</li>
+<li>
+<p>Vérifiez que vous obtenez un message <code>CONFLICT</code> :</p>
+<p></p><div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>Auto-merging<span class="w"> </span>keksli.md
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>CONFLICT<span class="w"> </span><span class="o">(</span>content<span class="o">)</span>:<span class="w"> </span>Merge<span class="w"> </span>conflict<span class="w"> </span><span class="k">in</span><span class="w"> </span>keksli.md
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>Automatic<span class="w"> </span>merge<span class="w"> </span>failed<span class="p">;</span><span class="w"> </span>fix<span class="w"> </span>conflicts<span class="w"> </span>and<span class="w"> </span><span class="k">then</span><span class="w"> </span>commit<span class="w"> </span>the<span class="w"> </span>result.
+</code></pre></div>
+8. Inspectez le fichier <code>keksli.md</code>. Vous devriez voir des marqueurs de version :
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="gh"># Keksli, the Little Piece of Cake</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="gh">1) Oh Keksli, sweet as a maple syrup kiss,</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="gh">=======</span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>1) Oh Keksli, sweet as a nutella kiss,
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>2) A tiny fluff of gentle bliss.
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a>3) With eyes that sparkle, soft and bright,
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>4) You bring the world pure joy and light.
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a>...
+</code></pre></div>
+9. Résolvez le conflit de fusion en supprimant les marqueurs de version 
+et en décidant quelle version conserver. Ensuite, enregistrez le fichier
+ et créez un commit final "resolve".<p></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Lorsque l'une des branches est <code>main</code>, fusionnez toujours d'abord dans l'autre branche. Puis fusionnez à nouveau dans <code>main</code>.</p>
+<ul>
+<li>L'intérêt des branches est généralement de développer une fonctionnalité sans endommager <code>main</code> pendant que le travail est en cours.  </li>
+<li>Lorsque vous êtes prêt à fusionner, <strong>fusionnez toujours d'abord <code>main</code> dans la branche feature</strong>, la fusion peut échouer et laisser votre dépôt dans un état problématique. Une procédure plus sûre est :</li>
+<li>Fusionnez <code>main</code> dans <code>feature</code>.</li>
+<li>Si nécessaire, résolvez les conflits et créez un nouveau commit "résolu".</li>
+<li>Fusionnez ensuite <code>feature</code> dans <code>main</code>.<br>
+<div class="mermaid"></div></li>
+</ul>
+</div>
+<h2 id="suppression-de-branches">Suppression de branches</h2>
+<ul>
+<li>Si vous ne supprimez jamais les branches que vous créez, votre graphe git finira par être encombré avec le temps.</li>
+<li>Idéalement, les branches doivent être supprimées du graphe une fois qu'elles ne sont plus nécessaires.</li>
+<li>Pour supprimer définitivement une branche, vous devez la supprimer localement et à distance.</li>
+</ul>
+<h3 id="local">Local</h3>
+<ul>
+<li>Supprimer une branche localement correspond à <em>supprimer une branche du graphe local</em>.</li>
+<li>Révisez le contenu du cours et cherchez comment supprimer une branche locale.</li>
+</ul>
+<h4 id="a-vous-de-jouer_5">À vous de jouer</h4>
+<ol>
+<li>Ajoutez un autre commit à votre branche <code>feature</code>.</li>
+<li>Supprimez la dernière branche <code>feature</code> de votre dépôt.<ul>
+<li>Tentez d'abord la commande <code>git branch --delete feature</code>.</li>
+<li>Pourquoi la commande est-elle rejetée ? Identifiez deux stratégies pour supprimer la branche malgré tout.</li>
+</ul>
+</li>
+<li>Utilisez <code>git adog</code> pour vérifier qu'elle a disparu.</li>
+<li>Utilisez <code>git branch -a</code> pour vérifier qu'elle n'est plus listée.</li>
+</ol>
+<h3 id="remote">Remote</h3>
+<ul>
+<li>Supprimer une branche à distance correspond à <em>supprimer une branche du graphe distant (serveur)</em>.</li>
+<li>Supprimer une branche distante n'a de sens que s'il y a un dépôt distant associé à votre dépôt local.</li>
+</ul>
+<h4 id="a-vous-de-jouer_6">À vous de jouer</h4>
+<ol>
+<li>Allez sur la page Gitlab de l'UQAM et reliez votre dépôt local à un serveur distant :<ul>
+<li>Connectez-vous à Gitlab.</li>
+<li>Cliquez sur le symbole <code>+</code> en haut à gauche, puis <code>nouveau projet / dépôt</code>.<ol>
+<li>Sélectionnez : <code>Créer un projet vide</code>.</li>
+<li>Sélectionnez un nom pour votre projet, par exemple <code>lab08</code>.</li>
+<li>Décochez : <code>Initialiser le dépôt avec un README</code>.</li>
+<li>Cliquez sur : <code>Créer un projet</code>.</li>
+</ol>
+</li>
+<li>Entrez la commande pour relier votre dépôt local au serveur distant : (remplacez <code>max</code> par votre nom d'utilisateur)<br>
+<code>git remote add origin git@gitlab.info.uqam.ca:max/lab08.git</code></li>
+</ul>
+</li>
+<li>Utilisez <code>git branch -a</code>, inspectez la liste des branches locales et distantes.</li>
+<li>Créez une nouvelle branche locale <code>feature</code>.</li>
+<li>Ajoutez au moins un commit à la branche <code>feature</code>.</li>
+<li>Poussez la branche vers le dépôt distant, avec :<br>
+<code>git push --set-upstream origin main</code></li>
+<li>Découvrez comment pousser la branche <code>feature</code> vers le dépôt distant.</li>
+<li>Vérifiez avec <code>git branch -a</code> que les deux branches existent sur le dépôt distant.<ul>
+<li>Connectez-vous également au site Gitlab de l'UQAM et inspectez la page du projet. Pouvez-vous repérer les deux branches ?</li>
+</ul>
+</li>
+<li>Supprimez la branche distante <code>feature</code> avec :<br>
+<code>git push -d origin feature</code></li>
+<li>Utilisez <code>git branch -a</code> à nouveau pour vérifier que la branche <code>feature</code> a disparu.</li>
+</ol>
+<h2 id="etiquetage-tagging">Étiquetage (Tagging)</h2>
+<p>Les étiquettes sont des identifiants supplémentaires lisibles par l'homme pour les commits.</p>
+<h3 id="ajout-detiquettes">Ajout d'étiquettes</h3>
+<p>Les étiquettes sont toujours d'abord créées localement, puis poussées vers le serveur.</p>
+<h4 id="a-vous-de-jouer_7">À vous de jouer</h4>
+<ol>
+<li>Réinitialisez votre projet de test.</li>
+<li>Créez une étiquette pour le commit initial sur la branche principale.
+   Illustration :
+    <div class="mermaid"></div></li>
+<li>Poussez l'étiquette vers le serveur.</li>
+<li>Trouvez les étiquettes.<ul>
+<li>Inspectez <code>git adog</code>. Pouvez-vous trouver l'étiquette ?</li>
+<li>Connectez-vous au serveur GitLab de l'UQAM et accédez à votre projet. Pouvez-vous trouver l'étiquette ?</li>
+</ul>
+</li>
+</ol>
+<h2 id="cherry-picking">Cherry Picking</h2>
+<p>Le cherry-picking vous permet de fusionner avec un commit spécifique plutôt que de fusionner avec toute une branche.</p>
+<h3 id="cherry-pick-dune-seule-ligne-du-poeme">Cherry-pick d'une seule ligne du poème</h3>
+<ul>
+<li>Dans cet exercice, vous effectuerez plusieurs modifications sur le poème <code>keksli</code> dans une branche <code>feature</code>.</li>
+<li>Ensuite, vous fusionnerez exactement l'un de ces changements dans la branche <code>main</code>.</li>
+<li>Illustration :
+    <div class="mermaid"></div></li>
+</ul>
+<h4 id="a-vous-de-jouer_8">À vous de jouer</h4>
+<ol>
+<li>Réinitialisez votre projet de test à son état original.</li>
+<li>Créez une branche <code>feature</code>.</li>
+<li>Effectuez trois commits consécutifs sur la branche <code>feature</code> :<ol>
+<li>Changez la première ligne du poème en <code>1) Oh Keksli, sweet as a cinnamon kiss,</code>. Faites un commit sur <code>feature</code>.</li>
+<li>Changez la deuxième ligne du poème en <code>2) A tiny fluff of chocolate bliss.</code>. Faites un commit sur <code>feature</code>.<br>
+   Notez l'ID du commit du changement de la deuxième ligne.</li>
+<li>Changez la troisième ligne du poème en <code>3) With eyes that glitter, soft and bright,</code>. Faites un commit sur <code>feature</code>.</li>
+</ol>
+</li>
+<li>Placez le HEAD de nouveau sur <code>main</code>. Faites un nouveau commit.</li>
+<li>Effectuez un cherry-pick du changement de la deuxième ligne du poème sur <code>main</code>, en utilisant l'ID du commit du changement de la deuxième ligne.</li>
+<li>Vous recevrez un conflit de fusion. Inspectez et résolvez le conflit. Faites un commit final pour résoudre le conflit.</li>
+<li>Inspectez le graphe avec <code>git adog</code>.</li>
+</ol>
+<details class="question">
+<summary>Y a-t-il quelque chose de particulier dans la sortie de <code>git adog</code> ?</summary>
+<p>Oui ! La représentation du graphe ne montre pas le cherry-pick ! En effet, <code>git log</code> ne montre jamais les cherry-picks, seulement les fusions de branches complètes.</p>
+</details>
+<h2 id="rebase">Rebase</h2>
+<p>Le rebase permet de redresser le graphe des commits git a posteriori.</p>
+<h3 id="rebase-dune-branche-feature">Rebase d'une branche feature</h3>
+<ul>
+<li>En général, le rebase est appliqué avant de fusionner une branche feature dans <code>main</code>.</li>
+<li>En faisant d'abord un rebase de <code>main</code> dans <code>feature</code>, il n'y a aucun risque d'endommager la branche <code>main</code> (tout comme lorsque vous fusionnez <code>main</code> dans <code>feature</code>).</li>
+<li>Le rebase crée une répétition de chaque commit sur <code>feature</code>, basée sur le commit le plus récent de <code>main</code>.</li>
+<li>Cela transforme le graphe, de sorte que les commits de <code>main</code> et <code>feature</code> ne se produisent plus de manière concurrente, mais séquentielle.</li>
+<li>La fusion finale est toujours garantie de fonctionner, car tous les conflits ont déjà été résolus pendant le rebase.</li>
+</ul>
+<h4 id="a-vous-de-jouer_9">À vous de jouer</h4>
+<ol>
+<li>Réinitialisez votre projet de test.</li>
+<li>Créez une branche <code>feature</code>.</li>
+<li>Effectuez trois commits consécutifs sur la branche <code>feature</code>.</li>
+<li>Attachez votre HEAD à <code>main</code>.</li>
+<li>Changez la ligne du titre du poème en <code>#Keksli, the Rebased piece of Cake</code>.</li>
+<li>Attachez votre HEAD à <code>feature</code> à nouveau. Votre graphe des commits devrait maintenant ressembler à ceci :
+    <div class="mermaid"></div></li>
+<li>Effectuez un rebase de la branche <code>feature</code>, pour qu'elle parte du commit le plus récent de <code>main</code>, en utilisant <code>git rebase main</code>.</li>
+<li>Fusionnez <code>feature</code> dans <code>main</code>.</li>
+<li>Inspectez la structure du graphe avec <code>git adog</code>. Vérifiez qu'elle correspond à :
+    <div class="mermaid"></div></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Rebase au lieu de fusionner</p>
+<p>Prenez l'habitude de faire un rebase plutôt que de fusionner. Un 
+graphe qui ne montre pas de progrès concurrent est plus facile à 
+maintenir et à naviguer. Le rebase transforme efficacement le graphe 
+pour ressembler à une histoire où chaque fonctionnalité a été développée
+ instantanément, sans concurrence avec la branche principale.</p>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: Contrôle de Version II" class="md-footer__link md-footer__link--prev" href="https://inf2050.uqam.ca/fr/vcs-2.html">
+<div class="md-footer__button md-icon">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                Contrôle de Version II
+              </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="atelier07_files/bundle.fe8b6f2b.min.js"></script>
+<script src="atelier07_files/extra.js"></script>
+
+</body></html>
